@@ -1,0 +1,494 @@
+<title>Very Kelly — Hero Background Preview</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  :root{
+    --navy:#1B0B4B;
+    --pink:#F0186B;
+    --pink-deep:#A80E5A;
+    --yellow:#FFD23F;
+    --cream:#FFF7E8;
+    --ink:#2A1440;
+    --paper:#FFF9F1;
+    --card:#ffffff;
+    --line:#EADFE0;
+  }
+  :root[data-theme="dark"]{
+    --ink:#F3E9EF;
+    --paper:#170A20;
+    --card:#241031;
+    --line:#3A2340;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --ink:#F3E9EF;
+      --paper:#170A20;
+      --card:#241031;
+      --line:#3A2340;
+    }
+  }
+  :root[data-theme="light"]{
+    --ink:#2A1440;
+    --paper:#FFF9F1;
+    --card:#ffffff;
+    --line:#EADFE0;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    padding:0 0 64px;
+  }
+
+  .top{
+    max-width:1180px;
+    margin:0 auto;
+    padding:40px 28px 8px;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:12px;
+    font-weight:700;
+    color:var(--pink);
+  }
+  h1.page-title{
+    font-size:28px;
+    margin:8px 0 6px;
+    font-weight:800;
+    letter-spacing:-0.01em;
+  }
+  .page-sub{
+    margin:0;
+    font-size:15px;
+    line-height:1.5;
+    color:var(--ink);
+    opacity:.72;
+    max-width:62ch;
+  }
+
+  .stage-wrap{
+    max-width:1180px;
+    margin:28px auto 0;
+    padding:0 28px;
+  }
+  .stage{
+    position:relative;
+    width:100%;
+    aspect-ratio:16/9;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 18px 50px -18px rgba(27,11,75,.45);
+    border:1px solid var(--line);
+  }
+  .stage svg{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    display:block;
+  }
+
+  .hero-copy{
+    position:absolute;
+    left:6%;
+    top:0;
+    bottom:0;
+    width:42%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:18px;
+    color:var(--cream);
+  }
+  .kicker{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(27,11,75,.28);
+    border:1.5px solid rgba(255,247,232,.55);
+    color:var(--cream);
+    font-weight:800;
+    font-size:clamp(11px,1.1vw,13px);
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:6px 14px;
+    border-radius:999px;
+    width:fit-content;
+  }
+  .headline{
+    font-size:clamp(28px,4.6vw,52px);
+    line-height:1.04;
+    font-weight:900;
+    margin:0;
+    color:var(--cream);
+    text-shadow:0 3px 0 rgba(27,11,75,.35), 0 14px 30px rgba(27,11,75,.35);
+    letter-spacing:-0.01em;
+  }
+  .headline em{
+    font-style:normal;
+    color:var(--yellow);
+  }
+  .dek{
+    margin:0;
+    max-width:34ch;
+    font-size:clamp(13px,1.5vw,17px);
+    line-height:1.5;
+    color:var(--cream);
+    opacity:.92;
+  }
+  .cta-row{
+    display:flex;
+    gap:14px;
+    margin-top:4px;
+    flex-wrap:wrap;
+  }
+  .cta{
+    font-weight:800;
+    font-size:clamp(12px,1.3vw,15px);
+    padding:12px 22px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+  }
+  .cta.primary{
+    background:var(--yellow);
+    color:var(--navy);
+    box-shadow:0 8px 0 #C79A0A, 0 14px 24px rgba(0,0,0,.25);
+  }
+  .cta.ghost{
+    background:transparent;
+    color:var(--cream);
+    border:2px solid rgba(255,247,232,.7);
+  }
+
+  .kelly-cutout{
+    position:absolute;
+    right:6%;
+    bottom:0;
+    height:88%;
+    width:26%;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    pointer-events:none;
+  }
+  .kelly-silhouette{
+    width:78%;
+    height:96%;
+    border-radius:140px 140px 20px 20px / 160px 160px 20px 20px;
+    background:linear-gradient(180deg, rgba(255,247,232,.16), rgba(255,247,232,.06));
+    border:2px dashed rgba(255,247,232,.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:var(--cream);
+    font-weight:800;
+    font-size:13px;
+    letter-spacing:.04em;
+    padding:16px;
+  }
+
+  .caption-row{
+    max-width:1180px;
+    margin:14px auto 0;
+    padding:0 28px;
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    font-size:12.5px;
+    color:var(--ink);
+    opacity:.6;
+  }
+
+  .grid{
+    max-width:1180px;
+    margin:44px auto 0;
+    padding:0 28px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:18px 18px 20px;
+  }
+  .card h3{
+    margin:0 0 6px;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .swatch{
+    width:14px;height:14px;border-radius:4px;flex:none;
+    box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);
+  }
+  .card p{
+    margin:0;
+    font-size:13px;
+    line-height:1.55;
+    opacity:.78;
+  }
+
+  .palette{
+    max-width:1180px;
+    margin:36px auto 0;
+    padding:0 28px;
+  }
+  .palette h2, .grid-title{
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    font-weight:800;
+    color:var(--pink);
+    margin:0 0 14px;
+  }
+  .chips{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+  }
+  .chip{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 12px 6px 6px;
+    font-size:12px;
+    font-variant-numeric:tabular-nums;
+  }
+  .chip .dot{width:20px;height:20px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);}
+
+  @media (max-width:760px){
+    .hero-copy{width:88%; left:6%; align-items:flex-start;}
+    .kelly-cutout{display:none;}
+  }
+</style>
+
+<div class="top">
+  <div class="eyebrow">Very Kelly · Hero Background</div>
+  <h1 class="page-title">Pink pattern, kept — built up into a full hero world</h1>
+  <p class="page-sub">The original diamond‑sparkle pink tile is untouched as the base layer. Everything else is additive: soft depth gradients, a clear reading zone on the left, and a richer illustrated world on the right where Kelly's cutout stands.</p>
+</div>
+
+<div class="stage-wrap">
+  <div class="stage" id="stage">
+    <svg viewBox="0 0 1920 1080" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="vk-sparkle-pattern" width="116" height="116" patternUnits="userSpaceOnUse">
+          <rect width="116" height="116" fill="#F0186B"/>
+          <path d="M58,0 C68,40 76,48 116,58 C76,68 68,76 58,116 C48,76 40,68 0,58 C40,48 48,40 58,0 Z" fill="#DE0E5C" opacity="0.8"/>
+        </pattern>
+        <linearGradient id="vk-horizontal-depth" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#FF3E85" stop-opacity="0.16"/>
+          <stop offset="42%" stop-color="#FF3E85" stop-opacity="0"/>
+          <stop offset="75%" stop-color="#8C0E52" stop-opacity="0.12"/>
+          <stop offset="100%" stop-color="#7A0B49" stop-opacity="0.28"/>
+        </linearGradient>
+        <linearGradient id="vk-vertical-depth" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#FF8FB4" stop-opacity="0.14"/>
+          <stop offset="45%" stop-color="#FF8FB4" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#6E0A45" stop-opacity="0.22"/>
+        </linearGradient>
+        <radialGradient id="vk-text-glow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22"/>
+          <stop offset="55%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+          <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="vk-corner-vignette" cx="50%" cy="50%" r="50%">
+          <stop offset="60%" stop-color="#3A0730" stop-opacity="0"/>
+          <stop offset="100%" stop-color="#3A0730" stop-opacity="0.22"/>
+        </radialGradient>
+        <filter id="vk-blur-blob" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="46"/>
+        </filter>
+        <filter id="vk-blur-cloud" x="-60%" y="-60%" width="220%" height="220%">
+          <feGaussianBlur stdDeviation="10"/>
+        </filter>
+        <path id="vk-sparkle" d="M0,-58 C10,-18 18,-10 58,0 C18,10 10,18 0,58 C-10,18 -18,10 -58,0 C-18,-10 -10,-18 0,-58 Z"/>
+        <g id="vk-cloud">
+          <ellipse cx="-70" cy="18" rx="72" ry="44"/>
+          <ellipse cx="0" cy="-6" rx="92" ry="56"/>
+          <ellipse cx="78" cy="16" rx="66" ry="40"/>
+          <ellipse cx="14" cy="34" rx="82" ry="34"/>
+        </g>
+        <g id="vk-butterfly">
+          <path d="M-6,-58 C-14,-78 -22,-80 -26,-70" fill="none" stroke="#1B0B4B" stroke-width="4" stroke-linecap="round"/>
+          <path d="M6,-58 C14,-78 22,-80 26,-70" fill="none" stroke="#1B0B4B" stroke-width="4" stroke-linecap="round"/>
+          <path d="M0,-52 C-14,-118 -108,-118 -128,-66 C-140,-32 -104,4 -50,-6 C-18,-12 0,-30 0,-52 Z" fill="#FFD23F" stroke="#1B0B4B" stroke-width="6"/>
+          <path d="M0,-52 C14,-118 108,-118 128,-66 C140,-32 104,4 50,-6 C18,-12 0,-30 0,-52 Z" fill="#FFD23F" stroke="#1B0B4B" stroke-width="6"/>
+          <path d="M0,-6 C-10,10 -66,30 -74,62 C-80,88 -46,98 -22,78 C-4,62 0,20 0,-6 Z" fill="#9B4FCE" stroke="#1B0B4B" stroke-width="6"/>
+          <path d="M0,-6 C10,10 66,30 74,62 C80,88 46,98 22,78 C4,62 0,20 0,-6 Z" fill="#9B4FCE" stroke="#1B0B4B" stroke-width="6"/>
+          <circle cx="-64" cy="-58" r="11" fill="#FFF7E8"/>
+          <circle cx="64" cy="-58" r="11" fill="#FFF7E8"/>
+          <path d="M0,-64 C-9,-30 -9,20 0,66 C9,20 9,-30 0,-64 Z" fill="#1B0B4B"/>
+        </g>
+        <g id="vk-note">
+          <ellipse cx="0" cy="46" rx="16" ry="11" transform="rotate(-18 0 46)"/>
+          <rect x="12" y="-56" width="7" height="100" rx="3.5"/>
+          <path d="M19,-56 C48,-48 50,-24 32,-14 C44,-34 34,-46 19,-40 Z"/>
+        </g>
+        <g id="vk-flower">
+          <g fill="currentColor" stroke="#1B0B4B" stroke-width="3">
+            <ellipse cx="0" cy="-32" rx="17" ry="26"/>
+            <ellipse cx="0" cy="32" rx="17" ry="26"/>
+            <ellipse cx="-32" cy="0" rx="26" ry="17"/>
+            <ellipse cx="32" cy="0" rx="26" ry="17"/>
+            <ellipse cx="-23" cy="-23" rx="17" ry="26" transform="rotate(45 -23 -23)"/>
+            <ellipse cx="23" cy="23" rx="17" ry="26" transform="rotate(45 23 23)"/>
+          </g>
+          <circle cx="0" cy="0" r="17" fill="#FFD23F" stroke="#1B0B4B" stroke-width="3"/>
+        </g>
+        <g id="vk-bow">
+          <path d="M-14,0 C-14,-16 -30,-24 -60,-56 C-104,-102 -158,-96 -168,-54 C-176,-20 -142,4 -96,-6 C-58,-14 -22,-6 -14,0 Z" fill="#FF3E85" stroke="#1B0B4B" stroke-width="8"/>
+          <path d="M14,0 C14,-16 30,-24 60,-56 C104,-102 158,-96 168,-54 C176,-20 142,4 96,-6 C58,-14 22,-6 14,0 Z" fill="#FF3E85" stroke="#1B0B4B" stroke-width="8"/>
+          <path d="M-14,0 C-14,16 -30,24 -52,60 C-80,106 -60,146 -30,140 C-8,136 -6,90 -10,52 C-12,32 -14,14 -14,0 Z" fill="#FF3E85" stroke="#1B0B4B" stroke-width="8"/>
+          <path d="M14,0 C14,16 30,24 52,60 C80,106 60,146 30,140 C8,136 6,90 10,52 C12,32 14,14 14,0 Z" fill="#FF3E85" stroke="#1B0B4B" stroke-width="8"/>
+          <rect x="-24" y="-24" width="48" height="56" rx="16" fill="#FF3E85" stroke="#1B0B4B" stroke-width="8"/>
+        </g>
+      </defs>
+
+      <rect width="1920" height="1080" fill="url(#vk-sparkle-pattern)"/>
+      <rect width="1920" height="1080" fill="url(#vk-vertical-depth)"/>
+      <rect width="1920" height="1080" fill="url(#vk-horizontal-depth)"/>
+      <ellipse cx="560" cy="560" rx="620" ry="520" fill="url(#vk-text-glow)"/>
+
+      <g filter="url(#vk-blur-blob)" opacity="0.9">
+        <ellipse cx="1500" cy="260" rx="360" ry="300" fill="#FFFFFF" opacity="0.10"/>
+        <ellipse cx="1250" cy="760" rx="340" ry="280" fill="#FFD23F" opacity="0.10"/>
+        <ellipse cx="1820" cy="880" rx="320" ry="260" fill="#9B4FCE" opacity="0.10"/>
+        <ellipse cx="1780" cy="380" rx="250" ry="210" fill="#FFFFFF" opacity="0.08"/>
+      </g>
+
+      <g fill="#FFFFFF" opacity="0.55" filter="url(#vk-blur-cloud)">
+        <use href="#vk-cloud" transform="translate(950,95) scale(0.65)"/>
+        <use href="#vk-cloud" transform="translate(1180,140) scale(1.05)"/>
+        <use href="#vk-cloud" transform="translate(1560,70) scale(0.85)"/>
+        <use href="#vk-cloud" transform="translate(1860,190) scale(0.75)"/>
+      </g>
+
+      <g fill="none" stroke-linecap="round">
+        <circle cx="2010" cy="60" r="345" stroke="#FF4D6D" stroke-width="28" opacity="0.85"/>
+        <circle cx="2010" cy="60" r="310" stroke="#FF9142" stroke-width="28" opacity="0.85"/>
+        <circle cx="2010" cy="60" r="275" stroke="#FFD23F" stroke-width="28" opacity="0.85"/>
+        <circle cx="2010" cy="60" r="240" stroke="#4ADE80" stroke-width="28" opacity="0.85"/>
+        <circle cx="2010" cy="60" r="205" stroke="#38BDF8" stroke-width="28" opacity="0.85"/>
+        <circle cx="2010" cy="60" r="170" stroke="#9B4FCE" stroke-width="28" opacity="0.85"/>
+      </g>
+
+      <g fill="none" stroke="#FFFFFF" stroke-linecap="round">
+        <path d="M930,300 C1080,210 1260,240 1420,180 C1520,142 1600,150 1660,120" stroke-width="6" opacity="0.28"/>
+        <path d="M980,760 C1140,840 1340,860 1500,790 C1620,738 1720,760 1800,720" stroke-width="6" opacity="0.28"/>
+        <path d="M880,520 C960,560 1000,610 970,660" stroke-width="6" opacity="0.22"/>
+      </g>
+
+      <g>
+        <use href="#vk-butterfly" transform="translate(1210,430) rotate(-8) scale(1.25)"/>
+        <use href="#vk-butterfly" transform="translate(1790,540) rotate(12) scale(0.95)"/>
+        <use href="#vk-butterfly" transform="translate(1870,730) rotate(-16) scale(0.55)"/>
+      </g>
+
+      <g fill="#FFF7E8" opacity="0.9">
+        <use href="#vk-note" transform="translate(1075,660) rotate(-12) scale(1.1)"/>
+        <use href="#vk-note" transform="translate(1910,400) rotate(10) scale(0.85)"/>
+        <use href="#vk-note" transform="translate(1010,410) rotate(6) scale(0.6)"/>
+      </g>
+
+      <g>
+        <use href="#vk-flower" transform="translate(1560,985) scale(1.25)" color="#FF9142"/>
+        <use href="#vk-flower" transform="translate(1710,1040) scale(0.9)" color="#9B4FCE"/>
+        <use href="#vk-flower" transform="translate(1860,970) scale(1.05)" color="#FF4D6D"/>
+        <use href="#vk-flower" transform="translate(1430,1060) scale(0.65)" color="#38BDF8"/>
+        <use href="#vk-flower" transform="translate(1310,150) scale(0.45)" color="#FFD23F" opacity="0.9"/>
+      </g>
+
+      <use href="#vk-bow" transform="translate(1880,995) scale(0.62) rotate(-6)"/>
+
+      <g fill="#FFFFFF">
+        <use href="#vk-sparkle" transform="translate(880,140) scale(0.42)" opacity="0.55"/>
+        <use href="#vk-sparkle" transform="translate(1040,260) scale(0.3)" opacity="0.5" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(1310,340) scale(0.5)" opacity="0.6"/>
+        <use href="#vk-sparkle" transform="translate(1470,470) scale(0.28)" opacity="0.55" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(1640,300) scale(0.4)" opacity="0.6"/>
+        <use href="#vk-sparkle" transform="translate(1130,560) scale(0.32)" opacity="0.5" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(1950,250) scale(0.45)" opacity="0.55"/>
+        <use href="#vk-sparkle" transform="translate(1720,650) scale(0.35)" opacity="0.55" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(1560,600) scale(0.24)" opacity="0.45"/>
+        <use href="#vk-sparkle" transform="translate(940,850) scale(0.36)" opacity="0.5" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(1180,900) scale(0.26)" opacity="0.45"/>
+        <use href="#vk-sparkle" transform="translate(1930,600) scale(0.3)" opacity="0.5"/>
+        <use href="#vk-sparkle" transform="translate(1780,900) scale(0.34)" opacity="0.5" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(1400,930) scale(0.22)" opacity="0.4"/>
+        <use href="#vk-sparkle" transform="translate(1050,180) scale(0.24)" opacity="0.4" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(1900,1000) scale(0.28)" opacity="0.45"/>
+        <use href="#vk-sparkle" transform="translate(70,90) scale(0.34)" opacity="0.32" fill="#FFD23F"/>
+        <use href="#vk-sparkle" transform="translate(210,960) scale(0.3)" opacity="0.28"/>
+        <use href="#vk-sparkle" transform="translate(50,560) scale(0.22)" opacity="0.22"/>
+        <use href="#vk-sparkle" transform="translate(700,140) scale(0.4)" opacity="0.22"/>
+        <use href="#vk-sparkle" transform="translate(300,940) scale(0.32)" opacity="0.2" fill="#FFD23F"/>
+      </g>
+
+      <rect width="1920" height="1080" fill="url(#vk-corner-vignette)"/>
+    </svg>
+
+    <div class="hero-copy">
+      <span class="kicker">✨ New season is here</span>
+      <h1 class="headline">Be so <em>very you</em><br/>in all that you do!</h1>
+      <p class="dek">Sing, dance, and imagine with Kelly — songs, stories, and playful learning for curious kids.</p>
+      <div class="cta-row">
+        <button class="cta primary">Watch Free Episodes</button>
+        <button class="cta ghost">Meet Kelly</button>
+      </div>
+    </div>
+
+    <div class="kelly-cutout">
+      <div class="kelly-silhouette">Kelly photo<br/>cutout sits here<br/>(transparent PNG)</div>
+    </div>
+  </div>
+</div>
+
+<div class="caption-row">
+  <span>Base viewBox 1920×1080 · scalable vector, crisp at any size</span>
+  <span>Dashed box = where a transparent Kelly cutout PNG overlaps in the live site</span>
+</div>
+
+<div class="palette">
+  <h2>Palette used</h2>
+  <div class="chips">
+    <div class="chip"><span class="dot" style="background:#F0186B"></span>Very Kelly Pink #F0186B</div>
+    <div class="chip"><span class="dot" style="background:#1B0B4B"></span>Ink Navy #1B0B4B</div>
+    <div class="chip"><span class="dot" style="background:#FFD23F"></span>Sunshine Yellow #FFD23F</div>
+    <div class="chip"><span class="dot" style="background:#FF9142"></span>Tangerine #FF9142</div>
+    <div class="chip"><span class="dot" style="background:#9B4FCE"></span>Grape Purple #9B4FCE</div>
+    <div class="chip"><span class="dot" style="background:#FF4D6D"></span>Watermelon #FF4D6D</div>
+    <div class="chip"><span class="dot" style="background:#38BDF8"></span>Sky Blue #38BDF8</div>
+    <div class="chip"><span class="dot" style="background:#FFF7E8"></span>Cream #FFF7E8</div>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="card">
+    <h3><span class="swatch" style="background:#F0186B"></span>Pattern preserved</h3>
+    <p>The official diamond‑sparkle tile is the bottom layer, untouched — every effect above it is a transparent overlay, so the brand mark of the background never disappears.</p>
+  </div>
+  <div class="card">
+    <h3><span class="swatch" style="background:#FFF7E8"></span>Clean left, ~45%</h3>
+    <p>A soft white glow sits behind the headline zone and decoration is kept to the far corners only, so navy/cream text stays easy to read at a glance.</p>
+  </div>
+  <div class="card">
+    <h3><span class="swatch" style="background:#9B4FCE"></span>Rich right, layered</h3>
+    <p>Blurred color blobs sit behind clouds, a corner rainbow, butterflies, music notes, and a flower bed — each layer slightly softer than the one in front for real depth.</p>
+  </div>
+  <div class="card">
+    <h3><span class="swatch" style="background:#FFD23F"></span>Room for Kelly</h3>
+    <p>The area where a standing cutout photo would go (dashed, right‑of‑center) is kept lighter on big set‑pieces; only small sparkles drift behind her, so she reads clearly in front.</p>
+  </div>
+</div>
