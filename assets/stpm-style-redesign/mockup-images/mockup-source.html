@@ -1,0 +1,468 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  :root{
+    --teal-900:#0B3A3A;
+    --teal-700:#146B70;
+    --teal-600:#178086;
+    --teal-100:#E3F5F1;
+    --mint-050:#EEF6EF;
+    --cream-050:#FBF3E1;
+    --gold-500:#F0B90B;
+    --gold-600:#C99400;
+    --ink:#163331;
+    --ink-soft:rgba(22,51,49,.68);
+    --paper:#FFFFFF;
+    --paper-raised:#FFFFFF;
+    --line:rgba(22,51,49,.13);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;}
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.13em;
+    font-size:12px;
+    font-weight:800;
+    color:var(--teal-600);
+    margin:0 0 10px;
+  }
+  h1,h2,h3{margin:0;}
+
+  .site-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    padding:18px 48px;
+    border-bottom:1px solid var(--line);
+    background:var(--paper);
+  }
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand-badge{
+    width:42px;height:42px;border-radius:50%;
+    background:linear-gradient(155deg,var(--teal-600),var(--teal-900));
+    display:flex;align-items:center;justify-content:center;
+    color:#fff; flex:none;
+  }
+  .brand-badge svg{width:22px;height:22px;}
+  .brand-word{
+    font-weight:800;
+    font-size:14px;
+    line-height:1.15;
+    color:var(--teal-700);
+  }
+  .brand-word small{
+    display:block;
+    font-weight:600;
+    font-size:9.5px;
+    letter-spacing:.14em;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+  }
+  .nav{display:flex; gap:30px; font-size:14px; font-weight:600; color:var(--ink-soft);}
+  .nav a{text-decoration:none;}
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    font-weight:800;
+    font-size:12.5px;
+    letter-spacing:.02em;
+    padding:11px 24px;
+    text-decoration:none;
+    border:none;
+    cursor:pointer;
+  }
+  .pill.solid{
+    background:var(--gold-500);
+    color:#231a00;
+    box-shadow:0 6px 0 var(--gold-600);
+  }
+  .pill.outline{
+    background:transparent;
+    color:var(--teal-700);
+    border:1.6px solid var(--teal-600);
+  }
+  .pill.outline.small{padding:9px 18px; font-size:12px;}
+
+  .hero{
+    background:var(--teal-100);
+    padding:56px 48px 64px;
+    text-align:center;
+  }
+  .hero .eyebrow{justify-content:center; display:flex;}
+  .hero h1{
+    font-size:44px;
+    font-weight:800;
+    color:var(--teal-900);
+    margin:8px 0 16px;
+    letter-spacing:-.01em;
+  }
+  .hero p.dek{
+    max-width:620px;
+    margin:0 auto 38px;
+    font-size:16px;
+    line-height:1.6;
+    color:var(--ink-soft);
+  }
+  .dest-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:22px;
+    max-width:1080px;
+    margin:0 auto;
+    text-align:left;
+  }
+  .dest-card{display:flex; flex-direction:column; gap:14px;}
+  .photo{
+    position:relative;
+    border-radius:18px;
+    overflow:hidden;
+    aspect-ratio:4/3;
+    background:linear-gradient(150deg,var(--teal-600),var(--teal-900));
+  }
+  .photo.gold{background:linear-gradient(150deg,var(--gold-500),var(--teal-700));}
+  .photo .tag{
+    position:absolute; left:12px; bottom:12px;
+    background:rgba(11,58,58,.55);
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+    padding:6px 12px;
+    border-radius:999px;
+  }
+  .dest-card .pill{width:100%;}
+
+  .promo{
+    background:linear-gradient(120deg,var(--teal-700),var(--teal-900));
+    color:#fff;
+    padding:40px 48px;
+    display:flex;
+    align-items:center;
+    gap:32px;
+    flex-wrap:wrap;
+  }
+  .promo-copy{flex:1; min-width:280px;}
+  .promo .eyebrow{color:var(--gold-500);}
+  .promo h2{font-size:24px; margin:0 0 8px; font-weight:800;}
+  .promo p{margin:0; font-size:15px; line-height:1.6; color:rgba(255,255,255,.85); max-width:600px;}
+  .promo-badges{display:flex; gap:12px; flex-wrap:wrap;}
+  .badge{
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:14px;
+    padding:12px 16px;
+    font-size:13px;
+    font-weight:700;
+    text-align:center;
+    min-width:130px;
+  }
+  .badge small{display:block; font-weight:500; opacity:.8; font-size:11px; margin-top:2px;}
+
+  .mission{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:48px;
+    align-items:center;
+    padding:64px 48px;
+    background:var(--paper);
+  }
+  .mission h2{font-size:28px; font-weight:800; margin:8px 0 16px; color:var(--teal-900);}
+  .mission p{font-size:15px; line-height:1.7; color:var(--ink-soft); margin:0 0 22px;}
+  .mission .photo{aspect-ratio:1/1; border-radius:50%; max-width:300px; margin:0 auto;}
+
+  .trip{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:48px;
+    align-items:center;
+    padding:52px 48px;
+  }
+  .trip.mint{background:var(--mint-050);}
+  .trip.white{background:var(--paper);}
+  .trip.reverse{grid-template-columns:1.15fr .85fr;}
+  .trip.reverse .photo{order:2;}
+  .trip .photo{aspect-ratio:1/1; border-radius:50%;}
+  .trip h3{font-size:23px; font-weight:800; margin:6px 0 12px; color:var(--teal-900);}
+  .trip p{font-size:15px; line-height:1.65; color:var(--ink-soft); margin:0 0 18px; max-width:460px;}
+
+  .testimonials{
+    background:var(--cream-050);
+    padding:64px 48px;
+    text-align:center;
+  }
+  .testimonials h2{font-size:26px; font-weight:800; margin:0 0 36px; color:var(--teal-900);}
+  .t-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:22px;
+    max-width:1080px;
+    margin:0 auto;
+  }
+  .t-card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:18px;
+    padding:28px 24px;
+    text-align:left;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+  .t-avatar{
+    width:42px;height:42px;border-radius:50%;
+    background:linear-gradient(150deg,var(--gold-500),var(--teal-600));
+    flex:none;
+  }
+  .t-card p.quote{font-size:14px; line-height:1.6; color:var(--ink-soft); margin:0; flex:1;}
+  .t-who{display:flex; align-items:center; gap:12px;}
+  .t-who div strong{display:block; font-size:14px;}
+  .t-who div span{display:block; font-size:12px; color:var(--ink-soft);}
+
+  .cta-band{
+    position:relative;
+    padding:72px 48px;
+    text-align:center;
+    color:#fff;
+    background:linear-gradient(160deg,var(--teal-700),var(--teal-900));
+  }
+  .cta-band h2{font-size:28px; font-weight:800; margin:0 0 12px;}
+  .cta-band p{margin:0 0 28px; color:rgba(255,255,255,.85); font-size:15px;}
+  .signup-row{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+    max-width:540px;
+    margin:0 auto;
+  }
+  .signup-row input{
+    flex:1;
+    min-width:180px;
+    padding:13px 18px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.4);
+    background:rgba(255,255,255,.1);
+    color:#fff;
+    font-size:14px;
+  }
+  .signup-row input::placeholder{color:rgba(255,255,255,.65);}
+
+  .help{
+    padding:56px 48px;
+    text-align:center;
+    background:var(--paper);
+  }
+  .help h2{font-size:23px; font-weight:800; margin:0 0 12px; color:var(--teal-900);}
+  .help p{max-width:560px; margin:0 auto 22px; font-size:15px; color:var(--ink-soft); line-height:1.6;}
+
+  .site-footer{
+    background:var(--teal-900);
+    color:rgba(255,255,255,.82);
+    padding:52px 48px 30px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:32px;
+    max-width:1080px;
+    margin:0 auto 34px;
+  }
+  .footer-brand .brand-word{color:#fff;}
+  .footer-brand p{font-size:13px; line-height:1.6; color:rgba(255,255,255,.6); margin:14px 0 0; max-width:340px;}
+  .footer-col h4{font-size:12px; text-transform:uppercase; letter-spacing:.1em; margin:0 0 14px; color:rgba(255,255,255,.55);}
+  .footer-col a{display:block; font-size:14px; text-decoration:none; color:rgba(255,255,255,.85); margin-bottom:10px;}
+  .footer-bottom{
+    max-width:1080px; margin:0 auto;
+    padding-top:22px;
+    border-top:1px solid rgba(255,255,255,.14);
+    display:flex; justify-content:space-between; align-items:center;
+    font-size:12px; color:rgba(255,255,255,.55);
+  }
+  .socials{display:flex; gap:10px;}
+  .socials span{
+    width:30px;height:30px;border-radius:50%;
+    background:rgba(255,255,255,.12);
+    display:flex; align-items:center; justify-content:center;
+    font-size:12px;
+  }
+</style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <div class="brand-badge">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 16l7-2 3-8 3 8 7 2-7 2-3 6-3-6-7-2z" fill="#fff"/></svg>
+      </div>
+      <div class="brand-word">Endurmenntunarferðir<small>Ferðir fyrir kennara</small></div>
+    </div>
+    <nav class="nav">
+      <a href="#">Heim</a>
+      <a href="#">Áfangastaðir</a>
+      <a href="#">Námskeið</a>
+      <a href="#">Um okkur</a>
+    </nav>
+    <a class="pill solid" href="#">Fáðu tilboð</a>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">Námskeið 2026 og 2027</p>
+    <h1>Fagleg námskeið á framandi slóðum</h1>
+    <p class="dek">Endurmenntunarferðir bjóða upp á faglegar, vel skipulagðar og skemmtilegar námsferðir til útlanda fyrir kennara og starfsfólk á öllum skólastigum. Fræðandi skólaheimsóknir og fagleg námskeið.</p>
+    <div class="dest-grid">
+      <div class="dest-card">
+        <div class="photo"><span class="tag">Amsterdam</span></div>
+        <a class="pill outline small" href="#">Skoða Amsterdam</a>
+      </div>
+      <div class="dest-card">
+        <div class="photo gold"><span class="tag">London</span></div>
+        <a class="pill outline small" href="#">Skoða London</a>
+      </div>
+      <div class="dest-card">
+        <div class="photo"><span class="tag">Salzburg</span></div>
+        <a class="pill outline small" href="#">Skoða Salzburg</a>
+      </div>
+      <div class="dest-card">
+        <div class="photo gold"><span class="tag">Berlín</span></div>
+        <a class="pill outline small" href="#">Skoða Berlín</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="promo">
+    <div class="promo-copy">
+      <p class="eyebrow">Styrkir og fjármögnun</p>
+      <h2>Allar ferðir eru styrkhæfar</h2>
+      <p>Ferðir Endurmenntunarferða eru styrktarhæfar til Vonarsjóðs KÍ, sem er starfsþróunarsjóður Félags grunnskólakennara og Skólastjórafélags Íslands.</p>
+    </div>
+    <div class="promo-badges">
+      <div class="badge">1,5 dagar<small>Leikskólastarfsfólk</small></div>
+      <div class="badge">1 dagur<small>Grunnskólastarfsfólk</small></div>
+      <div class="badge">2 dagar<small>Framhaldsskólastarfsfólk</small></div>
+    </div>
+  </section>
+
+  <section class="mission">
+    <div>
+      <p class="eyebrow">Um okkur</p>
+      <h2>Fjölbreyttur fræðileikur við allra hæfi</h2>
+      <p>Við sjáum um allt skipulag og reynum að hafa sem mest innifalið til að styrkurinn nýtist sem best. Við sjáum m.a. um flug, hótel, rútur, námskeið, skólaheimsóknir, skoðunarferðir, hópefli og fararstjórn.</p>
+      <a class="pill outline" href="#">Nánar um námskeiðin</a>
+    </div>
+    <div class="photo"><span class="tag">Hópur á ströndu</span></div>
+  </section>
+
+  <section class="trip mint">
+    <div class="photo"><span class="tag">Hugrækt og núvitund</span></div>
+    <div>
+      <p class="eyebrow">Vinsælt námskeið</p>
+      <h3>Hugrækt og núvitund</h3>
+      <p>Kynning á núvitund og hugleiðsluaðferðum sem kennarar geta nýtt bæði fyrir sjálfa sig og í kennslustofunni.</p>
+      <a class="pill outline small" href="#">Nánari upplýsingar</a>
+    </div>
+  </section>
+
+  <section class="trip white reverse">
+    <div>
+      <p class="eyebrow">Vinsælt námskeið</p>
+      <h3>Hópefli</h3>
+      <p>Verkefni og leikir sem efla liðsheild og samskipti innan starfsmannahópsins, skemmtileg leið til að styrkja skólabraginn.</p>
+      <a class="pill outline small" href="#">Nánari upplýsingar</a>
+    </div>
+    <div class="photo gold"><span class="tag">Hópefli</span></div>
+  </section>
+
+  <section class="trip mint">
+    <div class="photo"><span class="tag">Heimspeki</span></div>
+    <div>
+      <p class="eyebrow">Vinsælt námskeið</p>
+      <h3>Heimspeki, gagnrýnin hugsun</h3>
+      <p>Verkfæri til að þjálfa gagnrýna og skapandi hugsun hjá nemendum í gegnum heimspekilegar samræður.</p>
+      <a class="pill outline small" href="#">Nánari upplýsingar</a>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Ánægðir viðskiptavinir</h2>
+    <div class="t-grid">
+      <div class="t-card">
+        <p class="quote">"Frábærlega vel skipulögð ferð í alla staði. Það eina sem þurfti að hugsa um var að koma mínu fólki í rútuna á morgnana. Snilld að það sé búið að sjá um skipulagningu allt fyrir mann."</p>
+        <div class="t-who">
+          <div class="t-avatar"></div>
+          <div><strong>Mosfellsbær</strong><span>Leikskólastjóri</span></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <p class="quote">"Njarðvíkurskóli hefur farið með Endurmenntunarferðum til Alicante og Berlínar. Í báðum ferðunum hefur skipulagið verið hnökralaust fyrir bæði stóra og litla hópa."</p>
+        <div class="t-who">
+          <div class="t-avatar"></div>
+          <div><strong>Njarðvíkurskóli</strong><span>Skólastjórnendur</span></div>
+        </div>
+      </div>
+      <div class="t-card">
+        <p class="quote">"Við höfum farið með Endurmenntunarferðum til útlanda með okkar starfsfólki og lítum til þeirra fyrst þegar erlent ferðalag er skoðað."</p>
+        <div class="t-who">
+          <div class="t-avatar"></div>
+          <div><strong>Reykjanesbær</strong><span>Leikskólastjóri</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <p class="eyebrow" style="color:var(--gold-500)">Póstlisti</p>
+    <h2>Vertu fyrst/ur til að heyra af næstu ferð</h2>
+    <p>Fáðu tilkynningu þegar nýir áfangastaðir og dagsetningar opnast fyrir 2027.</p>
+    <div class="signup-row">
+      <input type="text" placeholder="Nafn" />
+      <input type="email" placeholder="Netfang" />
+      <button class="pill solid">Skrá mig</button>
+    </div>
+  </section>
+
+  <section class="help">
+    <h2>Þarftu aðstoð?</h2>
+    <p>Ef þú þarft frekari upplýsingar um faglega þróun fyrir kennara og starfsfólk getum við hjálpað þér að undirbúa umsóknargögn fyrir Vonarsjóð eða Erasmus+ styrki.</p>
+    <a class="pill outline" href="#">Hafðu samband</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="brand-word">Endurmenntunarferðir</div>
+        <p>Faglegar námsferðir til útlanda fyrir kennara og starfsfólk á öllum skólastigum.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Áfangastaðir</h4>
+        <a href="#">Amsterdam</a>
+        <a href="#">London</a>
+        <a href="#">Salzburg</a>
+        <a href="#">Berlín</a>
+      </div>
+      <div class="footer-col">
+        <h4>Flýtileiðir</h4>
+        <a href="#">Námskeið</a>
+        <a href="#">Fá tilboð</a>
+        <a href="#">Um okkur</a>
+        <a href="#">Hafa samband</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Endurmenntunarferðir. Allur réttur áskilinn.</span>
+      <div class="socials"><span>f</span><span>y</span><span>in</span></div>
+    </div>
+  </footer>
+
+</body>
+</html>
