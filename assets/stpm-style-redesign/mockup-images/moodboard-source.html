@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style>
+  :root{
+    --teal-900:#0B3A3A;
+    --teal-700:#146B70;
+    --teal-600:#178086;
+    --teal-100:#E3F5F1;
+    --mint-050:#EEF6EF;
+    --cream-050:#FBF3E1;
+    --gold-500:#F0B90B;
+    --gold-600:#C99400;
+    --ink:#163331;
+    --ink-soft:rgba(22,51,49,.68);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    width:1200px;
+    background:#fff;
+    color:var(--ink);
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    padding:56px 64px 64px;
+  }
+  .eyebrow{
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:13px;
+    font-weight:800;
+    color:var(--teal-600);
+    margin:0 0 10px;
+  }
+  h1{
+    font-size:34px;
+    font-weight:800;
+    color:var(--teal-900);
+    margin:0 0 8px;
+    letter-spacing:-.01em;
+  }
+  h1 span{color:var(--gold-600);}
+  .sub{
+    font-size:15.5px;
+    color:var(--ink-soft);
+    max-width:720px;
+    margin:0 0 44px;
+    line-height:1.55;
+  }
+  .block{margin-bottom:44px;}
+  .block-label{
+    font-size:12px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    color:var(--teal-700);
+    margin:0 0 16px;
+  }
+
+  /* palette */
+  .swatch-row{display:flex; gap:18px;}
+  .swatch{
+    flex:1;
+    height:96px;
+    border-radius:14px;
+    display:flex;
+    align-items:flex-end;
+    padding:12px 14px;
+    color:#fff;
+    font-size:12px;
+    font-weight:700;
+  }
+  .swatch.dark-text{color:var(--ink);}
+
+  /* buttons */
+  .btn-row{display:flex; gap:20px; align-items:center;}
+  .pill{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    font-weight:800;
+    font-size:14px;
+    padding:15px 30px;
+    border:none;
+  }
+  .pill.solid{background:var(--gold-500); color:#231a00; box-shadow:0 6px 0 var(--gold-600);}
+  .pill.outline{background:transparent; color:var(--teal-700); border:2px solid var(--teal-600);}
+
+  /* photo treatment */
+  .photo-row{display:flex; gap:32px; align-items:center;}
+  .photo-demo{
+    width:150px; height:150px; border-radius:50%;
+    background:linear-gradient(150deg,var(--teal-600),var(--teal-900));
+  }
+  .photo-demo.b{background:linear-gradient(150deg,var(--gold-500),var(--teal-700));}
+  .photo-note{font-size:14px; color:var(--ink-soft); max-width:420px; line-height:1.6;}
+
+  /* hero teaser */
+  .hero-teaser{
+    background:var(--teal-100);
+    border-radius:20px;
+    padding:40px 44px;
+    text-align:center;
+  }
+  .hero-teaser .brand{
+    display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:26px;
+  }
+  .brand-badge{
+    width:34px;height:34px;border-radius:50%;
+    background:linear-gradient(155deg,var(--teal-600),var(--teal-900));
+    display:flex;align-items:center;justify-content:center;
+  }
+  .brand-badge svg{width:18px;height:18px;}
+  .brand-word{font-weight:800; font-size:13px; color:var(--teal-700);}
+  .hero-teaser h2{
+    font-size:28px; font-weight:800; color:var(--teal-900); margin:0 0 10px;
+  }
+  .hero-teaser p{font-size:14px; color:var(--ink-soft); margin:0 0 26px;}
+  .mini-dest{display:flex; gap:16px; justify-content:center;}
+  .mini-card{width:160px;}
+  .mini-photo{
+    height:110px; border-radius:14px;
+    background:linear-gradient(150deg,var(--teal-600),var(--teal-900));
+    margin-bottom:10px;
+    position:relative;
+  }
+  .mini-photo.b{background:linear-gradient(150deg,var(--gold-500),var(--teal-700));}
+  .mini-photo span{
+    position:absolute; left:8px; bottom:8px;
+    background:rgba(11,58,58,.55); color:#fff; font-size:10px; font-weight:700;
+    padding:4px 9px; border-radius:999px;
+  }
+  .mini-btn{
+    display:block; text-align:center; font-size:11px; font-weight:800;
+    color:var(--teal-700); border:1.5px solid var(--teal-600); border-radius:999px; padding:7px 0;
+  }
+</style>
+</head>
+<body>
+
+  <p class="eyebrow">Look &amp; feel direction</p>
+  <h1>Endurmenntunarferðir, in a warmer <span>STPM-inspired</span> style</h1>
+  <p class="sub">Four simple pieces of the new look: the color palette, the button style, how photos get cropped, and a small preview of the homepage opening. This is the direction, not the finished site.</p>
+
+  <div class="block">
+    <p class="block-label">1. Color palette</p>
+    <div class="swatch-row">
+      <div class="swatch" style="background:#146B70">Teal 700</div>
+      <div class="swatch" style="background:#178086">Teal 600</div>
+      <div class="swatch" style="background:#0B3A3A">Teal 900</div>
+      <div class="swatch dark-text" style="background:#E3F5F1">Teal 100</div>
+      <div class="swatch dark-text" style="background:#F0B90B">Gold 500</div>
+      <div class="swatch dark-text" style="background:#FBF3E1">Cream</div>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="block-label">2. Buttons</p>
+    <div class="btn-row">
+      <span class="pill solid">Fáðu tilboð</span>
+      <span class="pill outline">Nánar um námskeiðin</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="block-label">3. Photo treatment</p>
+    <div class="photo-row">
+      <div class="photo-demo"></div>
+      <div class="photo-demo b"></div>
+      <p class="photo-note">Photos cropped into circles instead of square cards, the same signature STPM uses throughout its site for course and destination photos.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="block-label">4. Homepage opening, preview</p>
+    <div class="hero-teaser">
+      <div class="brand">
+        <div class="brand-badge"><svg viewBox="0 0 24 24" fill="none"><path d="M3 16l7-2 3-8 3 8 7 2-7 2-3 6-3-6-7-2z" fill="#fff"/></svg></div>
+        <span class="brand-word">Endurmenntunarferðir</span>
+      </div>
+      <h2>Fagleg námskeið á framandi slóðum</h2>
+      <p>Faglegar námsferðir til útlanda fyrir kennara og starfsfólk</p>
+      <div class="mini-dest">
+        <div class="mini-card">
+          <div class="mini-photo"><span>Amsterdam</span></div>
+          <span class="mini-btn">Skoða</span>
+        </div>
+        <div class="mini-card">
+          <div class="mini-photo b"><span>London</span></div>
+          <span class="mini-btn">Skoða</span>
+        </div>
+        <div class="mini-card">
+          <div class="mini-photo"><span>Salzburg</span></div>
+          <span class="mini-btn">Skoða</span>
+        </div>
+        <div class="mini-card">
+          <div class="mini-photo b"><span>Berlín</span></div>
+          <span class="mini-btn">Skoða</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
