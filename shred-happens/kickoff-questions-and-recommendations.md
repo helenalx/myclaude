@@ -16,7 +16,7 @@ Goal: 5,000 waitlist sign-ups by Oct 5, then convert that list to challenge sign
 6. From the testimonials spreadsheet, can you flag (or let me pull) the 4–6 strongest quotes for the page itself — I'll use the rest as rotating/carousel content. Photo testimonials > text-only where we have them.
 7. Any updated aggregate stats we can put in the hero or a stat bar — e.g. total women who've done the challenge, average results, number of challenges run? A number like "3,000+ women already joined" (which you mentioned) is strong, honest social proof and I'd like to use it prominently — confirm I can quote that.
 8. The current page shows a private Facebook accountability group. With the new app in development, is the community still FB-based for October, or should that copy change?
-9. Any change to program mechanics (6 weeks, live calls, macro/calorie plan, gym + home options, pricing) from what's currently on the page, or is this purely a copy/proof/UX refresh with the same offer?
+9. Any change to program mechanics (6 weeks, live calls, macro/calorie plan, gym + home options) from what's currently on the page, or is this purely a copy/proof/UX refresh with the same offer? (Pricing display — see Decisions log below, already answered.)
 
 **Positioning & compliance**
 10. You said "40+, not excluding women in their 30s" — do you want that stated explicitly on the page (e.g., in the hero or an FAQ), or kept implicit through testimonial ages/photos?
@@ -24,6 +24,11 @@ Goal: 5,000 waitlist sign-ups by Oct 5, then convert that list to challenge sign
 
 **Urgency mechanism**
 12. Is there an actual incentive for joining the waitlist before Oct 5 (bonus, locked-in price, early-bird perk), or is the deadline just "waitlist emails go out Oct 6"? If there's a real incentive I can build urgency copy and a countdown around it — if not, I'd rather not fake urgency.
+
+---
+
+## Decisions log
+- **Pricing display (Sep 2):** Pure lead-gen until the app checkout link goes live — no pricing or "see pricing" language anywhere on the page through Oct 11. The bottom-of-page "Get VIP access and pricing" CTA needs rewording (e.g., "Get on the list for October pricing & VIP access") since it currently implies pricing is visible now. Build the Oct 12–17 checkout button as a placeholder block, ready to swap in a real link without a structural rebuild.
 
 ---
 
