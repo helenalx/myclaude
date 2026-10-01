@@ -325,3 +325,110 @@
   }
 
 }
+
+
+/* =========================================================
+   QUIET ZONE MOBILE — FIX v2
+   1. Stickers: 2 on top, 2 underneath
+   2. Every card the same full width + same style
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  /* ---------- 1. STICKERS 2 × 2 ----------
+     Finds the box holding exactly 4 items that each
+     contain an image (no need to know Kajabi's classes) */
+
+  html:not(#vk):not(#vk-m) :not(#badgecss):not(.vk-theme-preview__lessons):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m) :not(#badgecss):not(.vk-theme-preview__lessons):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) :not(#badgecss):not(.vk-theme-preview__lessons):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+
+  /* ---------- 2. SAME WIDTH FOR EVERY CARD ----------
+     Remove Kajabi's side padding around the sticker card */
+
+  html:not(#vk):not(#vk-m) .panel:has(#block-1668075420438),
+  html:not(#vk):not(#vk-m) .panel:has(#block-1668075420438) .panel__body,
+  html:not(#vk):not(#vk-m) #block-1668075420438 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Same width, border, corners and shadow on all cards */
+  html:not(#vk):not(#vk-m) #block-1668075420438 > div,
+  html:not(#vk):not(#vk-m) .panel.syllabus,
+  html:not(#vk):not(#vk-m) .vk-theme-preview,
+  html:not(#vk):not(#vk-m) #section-product_badges,
+  html:not(#vk):not(#vk-m) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m) #block-1481845656651,
+  html:not(#vk):not(#vk-m) #block-1668173402619,
+  html:not(#vk):not(#vk-m) #block-1789640023931,
+  html:not(#vk):not(#vk-m) #block-1790602332586,
+  html:not(#vk):not(#vk-m) #block-1789642049276 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1668075420438 > div,
+  html:not(#vk):not(#vk-m) .panel.syllabus,
+  html:not(#vk):not(#vk-m) .vk-theme-preview,
+  html:not(#vk):not(#vk-m) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m) #block-1481845656651,
+  html:not(#vk):not(#vk-m) #block-1668173402619,
+  html:not(#vk):not(#vk-m) #block-1789640023931,
+  html:not(#vk):not(#vk-m) #block-1790602332586,
+  html:not(#vk):not(#vk-m) #block-1789642049276 {
+    border-width: 3px !important;
+    border-style: solid !important;
+    border-color: #14005d !important;
+    border-radius: 22px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+  /* Same inside spacing on all cards */
+  html:not(#vk):not(#vk-m) #block-1668075420438 > div,
+  html:not(#vk):not(#vk-m) .panel.syllabus .panel__body,
+  html:not(#vk):not(#vk-m) .vk-theme-preview,
+  html:not(#vk):not(#vk-m) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m) #block-1481845656651 .panel__body,
+  html:not(#vk):not(#vk-m) #block-1668173402619 .panel__body,
+  html:not(#vk):not(#vk-m) #block-1789640023931 .panel__body,
+  html:not(#vk):not(#vk-m) #block-1790602332586 .vk-space-explorer,
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-explorer {
+    padding: 22px 18px !important;
+  }
+
+}
