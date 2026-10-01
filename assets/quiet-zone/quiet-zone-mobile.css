@@ -1,0 +1,327 @@
+/* =========================================================
+   QUIET ZONE — MOBILE + TABLET FIXES
+   Paste at the VERY END of your custom CSS.
+
+   "html:not(#vk):not(#vk-m)" is only a strength booster so
+   these rules win over the earlier !important rules.
+   Keep it exactly as it is.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. STOP THE PAGE SLIDING OFF THE LEFT EDGE
+   The "EXPAND OUTWARD" rules (+190px wide, -100px margin)
+   push everything off-screen on phones and tablets.
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+  html:not(#vk):not(#vk-m) .container .row:has(#section-product_body):has(#section-product_syllabus),
+  html:not(#vk):not(#vk-m) .container .row:has(.badgesize):has(#category-2160764422) {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+
+  /* Theme preview: 2 cards per row on tablet */
+  html:not(#vk):not(#vk-m) .vk-theme-preview__lessons {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+
+  /* Safety net: no sideways scrolling on phones */
+  html:not(#vk):not(#vk-m) body {
+    overflow-x: clip !important;
+  }
+
+
+  /* -------------------------------------------------------
+     2. HERO STICKERS — 4 IN A ROW  →  2 × 2
+     Finds any box holding 3+ images side by side
+     (bare, wrapped in links, or wrapped in divs).
+     ------------------------------------------------------- */
+
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> img:nth-of-type(3)),
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> a:nth-of-type(3) > img),
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> div:nth-of-type(3) > img) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> img:nth-of-type(3)) > *,
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> a:nth-of-type(3) > img) > *,
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> div:nth-of-type(3) > img) > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> img:nth-of-type(3)) img,
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> a:nth-of-type(3) > img) img,
+  html:not(#vk):not(#vk-m) .panel__copy :is(div, p):not(#badgecss):has(> div:nth-of-type(3) > img) img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  /* Hero card padding */
+  html:not(#vk):not(#vk-m) #block-1668075420438 > div {
+    padding: 20px 18px !important;
+    border-radius: 24px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+
+  /* -------------------------------------------------------
+     3. "WHERE WOULD YOU LIKE TO BEGIN?" CARD
+     ------------------------------------------------------- */
+
+  html:not(#vk):not(#vk-m) .panel.syllabus {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 16px 0 0 !important;
+    border-radius: 22px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .panel__body {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    padding: 20px 16px 22px !important;
+  }
+
+  /* Title first, "2 themes" pill underneath it */
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 0 4px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__heading::after {
+    order: -1 !important;
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__heading .pull-right {
+    position: static !important;
+    float: none !important;
+    min-width: 0 !important;
+    height: 30px !important;
+    padding: 0 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__heading .pull-right::after {
+    font-size: 12px !important;
+  }
+
+  /* Feelings / Tiny Try cards — slimmer */
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__item > a {
+    min-height: 0 !important;
+    padding: 12px 14px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 0 #14005d !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .media {
+    min-height: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .media-left {
+    padding-right: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__img {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__img::after {
+    font-size: 24px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus #category-2160798546 .syllabus__img::after {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__title {
+    font-size: 17px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .syllabus__text {
+    font-size: 13px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .panel.syllabus .media-right::after {
+    font-size: 24px !important;
+  }
+
+
+  /* -------------------------------------------------------
+     4. THEME PREVIEW — COMPACT LIST ROWS
+     Small picture on the left, text on the right
+     (like the "Choose an activity" list in your model)
+     ------------------------------------------------------- */
+
+  html:not(#vk):not(#vk-m) .vk-theme-preview {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 20px 0 0 !important;
+    padding: 20px 16px 22px !important;
+    border-width: 3px !important;
+    border-radius: 22px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-theme-preview__header {
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    margin: 0 0 16px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-theme-preview__eyebrow {
+    font-size: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-theme-preview__title {
+    font-size: 22px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-theme-preview__count {
+    min-width: 0 !important;
+    height: 30px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-theme-preview__lessons {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-lesson-card {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    border-width: 3px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 5px 0 #14005d !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-lesson-card__image {
+    flex: 0 0 112px !important;
+    width: 112px !important;
+    height: auto !important;
+    min-height: 92px !important;
+    border-right: 3px solid #14005d !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-lesson-card__image img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-lesson-card__body {
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    justify-content: center !important;
+    padding: 12px 14px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-lesson-card__tag {
+    min-height: 22px !important;
+    padding: 3px 9px !important;
+    margin: 0 0 6px !important;
+    font-size: 10px !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-lesson-card__title {
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-lesson-card__description {
+    margin: 4px 0 0 !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  html:not(#vk):not(#vk-m) .vk-theme-preview__footer {
+    justify-content: center !important;
+    margin: 18px 0 0 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     5. BADGES, PROGRESS, GROWN-UPS — EVEN SPACING
+     ------------------------------------------------------- */
+
+  html:not(#vk):not(#vk-m) #section-product_badges {
+    width: 100% !important;
+    max-width: 100% !important;
+    transform: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1481845656651,
+  html:not(#vk):not(#vk-m) #block-1668173402619,
+  html:not(#vk):not(#vk-m) #block-1789640023931 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 18px 0 !important;
+  }
+
+
+  /* -------------------------------------------------------
+     6. "WHERE WOULD YOU LIKE TO GO NEXT?" — SLIMMER CARDS
+     ------------------------------------------------------- */
+
+  html:not(#vk):not(#vk-m) #block-1790602332586,
+  html:not(#vk):not(#vk-m) #block-1789642049276 {
+    margin: 18px 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1790602332586 .vk-space-explorer,
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-explorer {
+    padding: 22px 16px 24px !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1790602332586 .vk-space-explorer__title,
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-explorer__title {
+    font-size: 22px !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1790602332586 .vk-space-explorer__grid,
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-explorer__grid {
+    gap: 14px !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1790602332586 .vk-space-card,
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-card {
+    min-height: 68px !important;
+    padding: 14px 16px !important;
+    box-shadow: 0 5px 0 #14005d !important;
+  }
+
+}
