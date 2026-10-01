@@ -1,0 +1,465 @@
+/* =========================================================
+   VERY KELLY DASHBOARD — MOBILE FIXES + REPAIRS
+   Paste at the VERY END of this stylesheet.
+   "html:not(#vk):not(#vk-m)" is a strength booster so these
+   rules beat the earlier !important rules. Keep it as it is.
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   A. REPAIRS (all screen sizes)
+   Part of your stylesheet lost its ":hover", ":active",
+   ":first-child", ":nth-child" and ":empty" when it was
+   copied, so some effects are stuck "on". This undoes that.
+   --------------------------------------------------------- */
+
+/* Cards were permanently lifted — lift only on hover again */
+html:not(#vk):not(#vk-m) body .syllabus .syllabus__item > a,
+html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-card {
+  transform: none !important;
+}
+html:not(#vk):not(#vk-m) body .syllabus .syllabus__item > a:hover {
+  transform: translateY(-2px) !important;
+}
+html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-card:hover {
+  transform: translateY(-3px) !important;
+}
+
+/* Category page descriptions were hidden — show them again */
+html:not(#vk):not(#vk-m) #section-category_body .syllabus .syllabus__text {
+  display: block !important;
+}
+html:not(#vk):not(#vk-m) #section-category_body .syllabus .syllabus__text:empty {
+  display: none !important;
+}
+
+/* Grown Ups button looked permanently "pressed" */
+html:not(#vk):not(#vk-m) #block-1789640023931 .btn--1789640023931 {
+  transform: none !important;
+  box-shadow: 0 5px 0 #14005d !important;
+}
+html:not(#vk):not(#vk-m) #block-1789640023931 .btn--1789640023931:active {
+  transform: translateY(3px) !important;
+  box-shadow: 0 2px 0 #14005d !important;
+}
+
+/* Grown Ups title was shrunk to 13px — make it a title again */
+html:not(#vk):not(#vk-m) #block-1789640023931 .panel__copy > div > div:nth-child(2) {
+  font-family: Jumble, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 12px !important;
+}
+
+
+/* ---------------------------------------------------------
+   B. TABLET + MOBILE — STOP THE PAGE SLIDING OFF THE EDGE
+   --------------------------------------------------------- */
+
+@media (max-width: 991px) {
+
+  html:not(#vk):not(#vk-m) .container .row:has(.badgesize):has(#category-2160764422),
+  html:not(#vk):not(#vk-m) .container .row:has(#section-product_body):has(#section-product_syllabus) {
+    width: auto !important;
+    max-width: none !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview__lessons {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+}
+
+
+/* ---------------------------------------------------------
+   C. MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+
+  html:not(#vk):not(#vk-m) body {
+    overflow-x: clip !important;
+  }
+
+
+  /* ---------- 1. STICKERS 2 × 2 ---------- */
+
+  html:not(#vk):not(#vk-m) :not(#badgecss):not(.vk-theme-preview__lessons):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m) :not(#badgecss):not(.vk-theme-preview__lessons):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    flex: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) :not(#badgecss):not(.vk-theme-preview__lessons):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+
+  /* ---------- 2. EVERY CARD THE SAME WIDTH + STYLE ---------- */
+
+  html:not(#vk):not(#vk-m) .panel:has(#block-1668075420438),
+  html:not(#vk):not(#vk-m) .panel:has(#block-1668075420438) .panel__body,
+  html:not(#vk):not(#vk-m) #block-1668075420438 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1668075420438 > div,
+  html:not(#vk):not(#vk-m) body .panel.syllabus,
+  html:not(#vk):not(#vk-m) body .vk-theme-preview,
+  html:not(#vk):not(#vk-m) #section-product_badges,
+  html:not(#vk):not(#vk-m) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m) #block-1668173402619,
+  html:not(#vk):not(#vk-m) #block-1481845656651,
+  html:not(#vk):not(#vk-m) #block-1789640023931,
+  html:not(#vk):not(#vk-m) #block-1789642049276 {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1668075420438 > div,
+  html:not(#vk):not(#vk-m) body .panel.syllabus,
+  html:not(#vk):not(#vk-m) body .vk-theme-preview,
+  html:not(#vk):not(#vk-m) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m) #block-1668173402619,
+  html:not(#vk):not(#vk-m) #block-1481845656651,
+  html:not(#vk):not(#vk-m) #block-1789640023931,
+  html:not(#vk):not(#vk-m) #block-1789642049276 {
+    border-width: 3px !important;
+    border-style: solid !important;
+    border-color: #14005d !important;
+    border-radius: 22px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+  /* Same inside spacing */
+  html:not(#vk):not(#vk-m) #block-1668075420438 > div,
+  html:not(#vk):not(#vk-m) body .panel.syllabus .panel__body,
+  html:not(#vk):not(#vk-m) body .vk-theme-preview,
+  html:not(#vk):not(#vk-m) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m) #block-1481845656651 .panel__body,
+  html:not(#vk):not(#vk-m) #block-1789640023931 .panel__body,
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-explorer,
+  html:not(#vk):not(#vk-m) #block-1668173402619 img[alt="Creative Corner"] + div {
+    padding: 22px 18px !important;
+  }
+
+  /* Even gaps between the cards */
+  html:not(#vk):not(#vk-m) .panel--1668173402619 {
+    margin: 18px 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1668173402619,
+  html:not(#vk):not(#vk-m) #block-1481845656651,
+  html:not(#vk):not(#vk-m) #block-1789640023931,
+  html:not(#vk):not(#vk-m) #block-1789642049276 {
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+  }
+
+
+  /* ---------- 3. CREATIVE CORNER CARD ---------- */
+
+  /* Picture goes edge to edge */
+  html:not(#vk):not(#vk-m) .panel--1668173402619 .panel__copy > div:has(> img[alt="Creative Corner"]) {
+    padding: 0 !important;
+    border-radius: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1668173402619 img[alt="Creative Corner"] {
+    height: 200px !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1668173402619 img[alt="Creative Corner"] + div > p {
+    font-size: 17px !important;
+  }
+
+
+  /* ---------- 4. "WHERE WOULD YOU LIKE TO BEGIN?" ---------- */
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus {
+    margin-top: 18px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .panel__body {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .syllabus__heading {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    padding: 0 !important;
+    margin: 0 0 4px !important;
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .syllabus__heading .pull-right {
+    position: static !important;
+    float: none !important;
+    order: 2 !important;
+    min-width: 0 !important;
+    height: 30px !important;
+    padding: 0 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .syllabus__heading .pull-right::after {
+    font-size: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .syllabus__item > a {
+    min-height: 0 !important;
+    padding: 12px 14px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 5px 0 #14005d !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .media {
+    min-height: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .media-left {
+    padding-right: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .syllabus__img {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body #category-2160764422 .syllabus__img::after {
+    font-size: 24px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body #category-2160764896 .syllabus__img::after {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .syllabus__title {
+    font-size: 17px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .panel.syllabus .syllabus__text {
+    font-size: 13px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body #category-2160764422 .media-right::after {
+    font-size: 24px !important;
+  }
+
+
+  /* ---------- 5. THEME PREVIEW — COMPACT LIST ROWS ---------- */
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview {
+    margin-top: 20px !important;
+    margin-bottom: 18px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview__header {
+    flex-direction: row !important;
+    align-items: flex-end !important;
+    justify-content: space-between !important;
+    gap: 12px !important;
+    margin: 0 0 16px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview__eyebrow {
+    font-size: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview__title {
+    font-size: 22px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview__count {
+    min-width: 0 !important;
+    height: 30px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview__lessons {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+    margin: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card {
+    flex-direction: row !important;
+    align-items: stretch !important;
+    grid-column: auto !important;
+    border-width: 3px !important;
+    border-radius: 18px !important;
+    box-shadow: 0 5px 0 #14005d !important;
+    transform: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card__image {
+    flex: 0 0 112px !important;
+    width: 112px !important;
+    height: auto !important;
+    min-height: 92px !important;
+    border-right: 3px solid #14005d !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card__image img {
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card__body {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    padding: 12px 14px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card__tag {
+    min-height: 22px !important;
+    padding: 3px 9px !important;
+    margin: 0 0 6px !important;
+    font-size: 10px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card__title {
+    margin: 0 !important;
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card__description {
+    margin: 4px 0 0 !important;
+    font-size: 12px !important;
+    line-height: 1.35 !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-lesson-card__button {
+    min-height: 30px !important;
+    margin: 8px 0 0 !important;
+    font-size: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m) body .vk-theme-preview__footer {
+    justify-content: center !important;
+    margin: 18px 0 0 !important;
+  }
+
+
+  /* ---------- 6. BADGES — EVENLY SPACED CIRCLES ---------- */
+
+  html:not(#vk):not(#vk-m) #section-product_badges .badge-text h5 {
+    font-size: 20px !important;
+    margin: 0 0 18px !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges #badgecss {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px 14px !important;
+    justify-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .badgecontainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    float: none !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .badgecontainer > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .badgecontainer img {
+    display: block !important;
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 72px !important;
+    margin: 0 auto 8px !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .panel__copy {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+
+
+  /* ---------- 7. GROWN UPS ---------- */
+
+  html:not(#vk):not(#vk-m) #block-1789640023931 .panel__copy > div > div:nth-child(2) {
+    font-size: 19px !important;
+  }
+
+
+  /* ---------- 8. "WHERE WOULD YOU LIKE TO GO NEXT?" ---------- */
+
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-explorer__title {
+    font-size: 22px !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-explorer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  html:not(#vk):not(#vk-m) #block-1789642049276 .vk-space-card {
+    min-height: 68px !important;
+    padding: 14px 16px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 5px 0 #14005d !important;
+  }
+
+}
