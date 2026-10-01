@@ -432,3 +432,59 @@
   }
 
 }
+
+
+/* =========================================================
+   QUIET ZONE MOBILE — FIX v3
+   Badges: 3 evenly spaced circles per row, no overlapping
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  html:not(#vk):not(#vk-m) #section-product_badges #badgecss {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px 14px !important;
+    justify-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .badgecontainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    float: none !important;
+    position: static !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .badgecontainer > * {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .badgecontainer img {
+    display: block !important;
+    width: 72px !important;
+    height: 72px !important;
+    max-width: 72px !important;
+    margin: 0 auto 8px !important;
+    position: static !important;
+    transform: none !important;
+  }
+
+  html:not(#vk):not(#vk-m) #section-product_badges .panel__copy {
+    font-size: 13px !important;
+    line-height: 1.25 !important;
+    text-align: center !important;
+  }
+
+}
