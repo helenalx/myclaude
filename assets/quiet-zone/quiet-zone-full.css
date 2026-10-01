@@ -188,16 +188,16 @@ body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_bo
 
 /* 7. CARD COLOURS — automatic, repeat every 4 themes
    (new themes pick up a colour on their own) */
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__item:nth-child(4n+1 of .syllabus__item) > a {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__item:nth-child(4n+1 of .syllabus__item) > a {
   background: #0eaeef !important;
 }
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__item:nth-child(4n+2 of .syllabus__item) > a {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__item:nth-child(4n+2 of .syllabus__item) > a {
   background: #fff8e7 !important;
 }
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__item:nth-child(4n+3 of .syllabus__item) > a {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__item:nth-child(4n+3 of .syllabus__item) > a {
   background: #ffd21f !important;
 }
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__item:nth-child(4n+4 of .syllabus__item) > a {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__item:nth-child(4n+4 of .syllabus__item) > a {
   background: #20cf68 !important;
 }
 
@@ -228,7 +228,7 @@ body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_bo
 }
 
 /* 9. ROUND THUMBNAIL — uses each theme's own Kajabi thumbnail */
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__img {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__img {
   position: relative !important;
   width: 64px !important;
   height: 64px !important;
@@ -240,7 +240,7 @@ body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_bo
   box-sizing: border-box !important;
 }
 
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__img img {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__img img {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
@@ -250,8 +250,8 @@ body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_bo
   border-radius: 50% !important;
 }
 
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__img::before,
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus__img::after {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__img::before,
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .syllabus__img::after {
   content: none !important;
   display: none !important;
 }
@@ -286,14 +286,14 @@ body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_bo
 }
 
 /* 16. ARROW ON EVERY THEME CARD */
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .media-right {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .media-right {
   display: flex !important;
   align-items: center !important;
   gap: 10px !important;
   color: #14005d !important;
 }
 
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .media-right::after {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .media-right::after {
   content: "\2192" !important;
   display: block !important;
   color: #14005d !important;
@@ -302,7 +302,7 @@ body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_bo
   line-height: 1 !important;
 }
 
-body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .progress__icon {
+body:has(#block-1789642049276):not(:has(#section-category_body, #section-post_body)) .syllabus .progress__icon {
   color: #ff2f78 !important;
   font-size: 22px !important;
 }
