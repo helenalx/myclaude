@@ -18,7 +18,7 @@
    ========================================================= */
 
 /* Outer card */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .panel.syllabus {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] {
   width: 100% !important;
   max-width: 100% !important;
   margin: 25px 0 !important;
@@ -31,7 +31,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .panel.syllabus {
   box-sizing: border-box !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .panel.syllabus > .panel__body {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] > .panel__body {
   display: block !important;
   width: 100% !important;
   margin: 0 !important;
@@ -41,7 +41,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .panel.syllabus >
 }
 
 /* Heading */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__heading {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading {
   display: block !important;
   position: relative !important;
   margin: 0 0 24px !important;
@@ -56,14 +56,14 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__headin
   line-height: 1.2 !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__heading::before,
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__heading::after {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading::after {
   content: none !important;
   display: none !important;
 }
 
 /* Theme count (the small grey number) */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__heading .pull-right {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading .pull-right {
   position: absolute !important;
   top: 4px !important;
   right: 0 !important;
@@ -82,13 +82,13 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__headin
   line-height: 1.2 !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__heading .pull-right::after {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading .pull-right::after {
   content: none !important;
   display: none !important;
 }
 
 /* Each theme */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item {
   display: block !important;
   width: 100% !important;
   margin: 0 0 18px !important;
@@ -98,12 +98,12 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item {
   box-sizing: border-box !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item:last-child {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item:last-child {
   margin-bottom: 0 !important;
 }
 
 /* Theme card */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item > a {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a {
   position: relative !important;
   display: block !important;
   width: 100% !important;
@@ -120,21 +120,21 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item >
   transition: transform 0.15s ease, box-shadow 0.15s ease !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item > a:hover {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a:hover {
   transform: translateY(-3px) !important;
   box-shadow: 0 10px 0 #14005d !important;
   text-decoration: none !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item > a::before,
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item > a::after,
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .media-right::after {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .media-right::after {
   content: none !important;
   display: none !important;
 }
 
 /* Row: picture | title | progress */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .media {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media {
   display: flex !important;
   flex-direction: row !important;
   align-items: center !important;
@@ -146,14 +146,14 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .
   box-sizing: border-box !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .media-left {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-left {
   display: block !important;
   flex: 0 0 auto !important;
   width: auto !important;
   padding: 0 20px 0 0 !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .media-body {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-body {
   display: block !important;
   flex: 1 1 auto !important;
   width: auto !important;
@@ -163,7 +163,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .
   background: transparent !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .media-right {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-right {
   position: static !important;
   display: block !important;
   flex: 0 0 auto !important;
@@ -174,7 +174,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .
 }
 
 /* Thumbnail — each theme's own Kajabi image */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img {
   position: relative !important;
   width: 145px !important;
   height: 86px !important;
@@ -186,7 +186,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img {
   box-sizing: border-box !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img img {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img img {
   display: block !important;
   width: 100% !important;
   height: 100% !important;
@@ -197,14 +197,14 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img im
   object-fit: cover !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img::before,
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img::after {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img::after {
   content: none !important;
   display: none !important;
 }
 
 /* Title */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__title {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__title {
   display: block !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -216,12 +216,12 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__title 
   text-decoration: none !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__text {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__text {
   display: none !important;
 }
 
 /* Progress */
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .progress {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .progress {
   display: block !important;
   width: 100% !important;
   height: auto !important;
@@ -232,7 +232,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .
   box-shadow: none !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .progress__bar {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .progress__bar {
   display: block !important;
   width: 100% !important;
   height: 9px !important;
@@ -242,7 +242,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .
   overflow: hidden !important;
 }
 
-html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .progress__fill {
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .progress__fill {
   height: 100% !important;
   background: #14005d !important;
   border-radius: 999px !important;
@@ -251,59 +251,59 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .
 /* Dashboard mobile */
 @media (max-width: 767px) {
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .panel.syllabus {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] {
     border-width: 3px !important;
     border-radius: 25px !important;
     box-shadow: 0 7px 0 #14005d !important;
     margin: 18px 0 20px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .panel.syllabus > .panel__body {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] > .panel__body {
     padding: 22px 16px 26px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__heading {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading {
     font-size: 24px !important;
     line-height: 1.15 !important;
     margin-bottom: 18px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item {
     margin-bottom: 14px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item > a {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a {
     padding: 10px !important;
     border-radius: 16px !important;
     box-shadow: 0 6px 0 #14005d !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .media-left {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-left {
     padding-right: 12px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img {
     width: 105px !important;
     min-width: 105px !important;
     height: 68px !important;
     border-radius: 10px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__img img {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img img {
     border-radius: 8px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__title {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__title {
     font-size: 17px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .media-right {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-right {
     width: 25% !important;
     min-width: 70px !important;
     padding-left: 10px !important;
   }
 
-  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_syllabus .syllabus__item .progress__bar {
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .progress__bar {
     height: 7px !important;
   }
 
