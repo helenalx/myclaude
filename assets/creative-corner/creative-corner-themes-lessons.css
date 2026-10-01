@@ -574,6 +574,7 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item:last
 /* Lesson card */
 html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item > a {
   position: relative !important;
+  box-sizing: border-box !important;
   display: block !important;
   width: 100% !important;
   height: auto !important;
