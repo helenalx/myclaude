@@ -1,0 +1,92 @@
+/* =========================================================
+   CREATIVE CORNER — MOBILE: 2 × 2 IMAGES + EQUAL CARD WIDTHS
+   Paste at the VERY END of the Creative Corner Custom CSS.
+   "html:not(#vk):not(#vk-m):not(#vk-cc)" is only a strength
+   booster so these rules win. Keep it as it is.
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  /* ---------- 1. FOUR IMAGES → 2 ON TOP, 2 UNDERNEATH ----------
+     Finds the box that holds exactly 4 items that each contain
+     an image (bare, inside a link, or inside a div). */
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) :not(#badgecss):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) :not(#badgecss):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) > * {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    flex: none !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) :not(#badgecss):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+
+  /* ---------- 2. WELCOME CARD AS WIDE AS THE OTHER CARDS ----------
+     Removes Kajabi's side padding around the welcome card */
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438),
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__body,
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__block,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 22px 18px !important;
+    border-width: 3px !important;
+    border-radius: 22px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* ---------- 3. EVERY CARD THE SAME WIDTH ---------- */
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"],
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668173402619,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1481845656651,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1481845715286,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1789640023931,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1789642049276 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+}
