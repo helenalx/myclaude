@@ -1,0 +1,1788 @@
+/* ==========================================
+   VERY KELLY — QUIET ZONE CUSTOM CSS
+   (rebuilt to match the Creative Corner layout)
+   ========================================== */
+
+
+/* =========================================
+   DASHBOARD CONTENT — EXPAND OUTWARD (desktop only)
+   ========================================= */
+
+.container .row:has(#section-product_body):has(#section-product_syllabus),
+.container .row:has(.badgesize):has(#category-2160764422) {
+  width: calc(100% + 190px) !important;
+  max-width: none !important;
+  margin-left: -100px !important;
+  margin-right: -100px !important;
+  box-sizing: border-box !important;
+}
+
+/* Back to normal width on tablets and phones */
+@media (max-width: 991px) {
+  .container .row:has(#section-product_body):has(#section-product_syllabus),
+  .container .row:has(.badgesize):has(#category-2160764422) {
+    width: auto !important;
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+  }
+}
+
+
+/* =========================================
+   CREATIVE CORNER WELCOME CARD
+   ========================================= */
+
+.panel:has(#block-1668075420438),
+.panel:has(#block-1668075420438) .panel__body,
+.panel:has(#block-1668075420438) .panel__block,
+#block-1668075420438,
+#block-1668075420438 > div {
+  background: transparent !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Same width as the cards below it (removes Kajabi's side padding) */
+.panel:has(#block-1668075420438),
+.panel:has(#block-1668075420438) .panel__body,
+.panel:has(#block-1668075420438) .panel__block,
+#block-1668075420438 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+#block-1668075420438 > div {
+  background: #ffffff !important;
+  background-image: none !important;
+  border: 3px solid #14005d !important;
+  border-radius: 30px !important;
+  box-shadow: 0 9px 0 #14005d !important;
+  padding: 28px 30px 24px 30px !important;
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   PRODUCT BADGES / STICKERS
+   ========================================================= */
+
+#section-product_badges {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  transform: none !important;
+  box-sizing: border-box !important;
+}
+
+#section-product_badges .badgesize {
+  background: #ffffff !important;
+  border: 4px solid #14005d !important;
+  border-radius: 28px !important;
+  box-shadow: 0 8px 0 #14005d !important;
+  padding: 24px 22px 20px !important;
+  box-sizing: border-box !important;
+}
+
+#section-product_badges .badge-text h5 {
+  color: #14005d !important;
+  font-size: 23px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 22px !important;
+}
+
+#section-product_badges #badgecss {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  margin: 0 -4px !important;
+}
+
+#section-product_badges .badgecontainer {
+  width: 33.333333% !important;
+  padding: 0 4px !important;
+  margin: 0 0 20px !important;
+  box-sizing: border-box !important;
+  text-align: center !important;
+  display: block !important;
+}
+
+#section-product_badges .badgecontainer img {
+  display: block !important;
+  width: 72px !important;
+  height: 72px !important;
+  max-width: 72px !important;
+  margin: 0 auto 7px !important;
+  object-fit: contain !important;
+}
+
+#section-product_badges .panel__body {
+  padding: 0 !important;
+}
+
+#section-product_badges .panel__copy {
+  color: #14005d !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+#section-product_badges .badgetxt {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+
+  #section-product_badges {
+    width: 100% !important;
+    max-width: calc(100% - 24px) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    transform: none !important;
+  }
+
+  #section-product_badges .badgesize {
+    border-width: 4px !important;
+    border-radius: 26px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+    padding: 22px 14px 18px !important;
+  }
+
+  #section-product_badges .badge-text h5 {
+    font-size: 21px !important;
+    margin-bottom: 20px !important;
+  }
+
+  #section-product_badges #badgecss {
+    margin: 0 -3px !important;
+  }
+
+  #section-product_badges .badgecontainer {
+    padding: 0 3px !important;
+    margin-bottom: 18px !important;
+  }
+
+  #section-product_badges .badgecontainer img {
+    width: 68px !important;
+    height: 68px !important;
+    max-width: 68px !important;
+    margin-bottom: 6px !important;
+  }
+
+  #section-product_badges .panel__copy {
+    font-size: 14px !important;
+  }
+
+}
+
+
+/* =========================================================
+   CREATIVE ADVENTURE PROGRESS CARD
+   ========================================================= */
+
+#block-1481845656651 {
+  background: #ffffff !important;
+  border: 4px solid #14005d !important;
+  border-radius: 28px !important;
+  box-shadow: 0 8px 0 #14005d !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+#block-1481845656651 .panel__body {
+  padding: 22px 24px 24px !important;
+  margin: 0 !important;
+}
+
+#block-1481845656651 .panel__heading {
+  color: #14005d !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+}
+
+#block-1481845656651 .progress__bar {
+  position: relative !important;
+  width: 100% !important;
+  height: 20px !important;
+  background: #fffaf0 !important;
+  border: 3px solid #14005d !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#block-1481845656651 .progress__fill {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  height: auto !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  box-sizing: border-box !important;
+  transition: width 0.4s ease !important;
+}
+
+@media (max-width: 767px) {
+
+  #block-1481845656651 {
+    border-width: 4px !important;
+    border-radius: 26px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+  #block-1481845656651 .panel__body {
+    padding: 20px 18px 20px !important;
+  }
+
+  #block-1481845656651 .panel__heading {
+    font-size: 18px !important;
+    margin-bottom: 15px !important;
+  }
+
+  #block-1481845656651 .progress__bar {
+    height: 18px !important;
+  }
+
+}
+
+
+/* =========================================================
+   GROWN UPS COMMUNITY CARD
+   ========================================================= */
+
+#block-1789640023931 {
+  background: #5b24f5 !important;
+  border: 4px solid #14005d !important;
+  border-radius: 30px !important;
+  box-shadow: 0 9px 0 #14005d !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 25px 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+#block-1789640023931 .panel__body {
+  padding: 26px 26px 24px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1789640023931 .panel__copy {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* For grown-ups */
+#block-1789640023931 .panel__copy > div > div:first-child {
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+}
+
+/* Grown Ups Community */
+#block-1789640023931 .panel__copy > div > div:nth-child(2) {
+  color: #ffffff !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+}
+
+/* Description */
+#block-1789640023931 .panel__copy > div > p {
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Button */
+#block-1789640023931 .btn--1789640023931 {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: #ffffff !important;
+  border: 3px solid #14005d !important;
+  border-radius: 999px !important;
+  box-shadow: 0 5px 0 #14005d !important;
+  color: #14005d !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  padding: 10px 18px !important;
+  margin: 22px 0 2px !important;
+  transition: transform .15s ease, box-shadow .15s ease !important;
+}
+
+#block-1789640023931 .btn--1789640023931:hover {
+  background: #ffffff !important;
+  border-color: #14005d !important;
+  color: #14005d !important;
+  text-decoration: none !important;
+}
+
+#block-1789640023931 .btn--1789640023931:active {
+  transform: translateY(3px) !important;
+  box-shadow: 0 2px 0 #14005d !important;
+}
+
+@media (max-width: 767px) {
+
+  #block-1789640023931 {
+    border-width: 4px !important;
+    border-radius: 28px !important;
+    box-shadow: 0 8px 0 #14005d !important;
+  }
+
+  #block-1789640023931 .panel__body {
+    padding: 24px 20px 22px !important;
+  }
+
+  #block-1789640023931 .panel__copy > div > div:first-child {
+    font-size: 13px !important;
+    margin-bottom: 9px !important;
+  }
+
+  #block-1789640023931 .panel__copy > div > div:nth-child(2) {
+    font-size: 19px !important;
+    margin-bottom: 11px !important;
+  }
+
+  #block-1789640023931 .panel__copy > div > p {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+  }
+
+  #block-1789640023931 .btn--1789640023931 {
+    font-size: 14px !important;
+    padding: 9px 14px !important;
+    margin-top: 20px !important;
+  }
+
+}
+
+
+/* =========================================================
+   GROWN UPS COMMUNITY CARD (Quiet Zone)
+   ========================================================= */
+
+#block-1668173402619 {
+  background: #5b24f5 !important;
+  border: 4px solid #14005d !important;
+  border-radius: 30px !important;
+  box-shadow: 0 9px 0 #14005d !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 25px 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+#block-1668173402619 .panel__body {
+  padding: 26px 26px 24px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1668173402619 .panel__copy {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* For grown-ups */
+#block-1668173402619 .panel__copy > div > div:first-child {
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 10px !important;
+  padding: 0 !important;
+}
+
+/* Grown Ups Community */
+#block-1668173402619 .panel__copy > div > div:nth-child(2) {
+  color: #ffffff !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+}
+
+/* Description */
+#block-1668173402619 .panel__copy > div > p {
+  color: #ffffff !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Button */
+#block-1668173402619 .btn--1668173402619 {
+  display: block !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  background: #ffffff !important;
+  border: 3px solid #14005d !important;
+  border-radius: 999px !important;
+  box-shadow: 0 5px 0 #14005d !important;
+  color: #14005d !important;
+  text-decoration: none !important;
+  font-family: inherit !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+  padding: 10px 18px !important;
+  margin: 22px 0 2px !important;
+  transition: transform .15s ease, box-shadow .15s ease !important;
+}
+
+#block-1668173402619 .btn--1668173402619:hover {
+  background: #ffffff !important;
+  border-color: #14005d !important;
+  color: #14005d !important;
+  text-decoration: none !important;
+}
+
+#block-1668173402619 .btn--1668173402619:active {
+  transform: translateY(3px) !important;
+  box-shadow: 0 2px 0 #14005d !important;
+}
+
+@media (max-width: 767px) {
+
+  #block-1668173402619 {
+    border-width: 4px !important;
+    border-radius: 28px !important;
+    box-shadow: 0 8px 0 #14005d !important;
+  }
+
+  #block-1668173402619 .panel__body {
+    padding: 24px 20px 22px !important;
+  }
+
+  #block-1668173402619 .panel__copy > div > div:first-child {
+    font-size: 13px !important;
+    margin-bottom: 9px !important;
+  }
+
+  #block-1668173402619 .panel__copy > div > div:nth-child(2) {
+    font-size: 19px !important;
+    margin-bottom: 11px !important;
+  }
+
+  #block-1668173402619 .panel__copy > div > p {
+    font-size: 15px !important;
+    line-height: 1.45 !important;
+  }
+
+  #block-1668173402619 .btn--1668173402619 {
+    font-size: 14px !important;
+    padding: 9px 14px !important;
+    margin-top: 20px !important;
+  }
+
+}
+
+
+/* =========================================================
+   EXPLORE ANOTHER SPACE
+   ========================================================= */
+
+#block-1789642049276 {
+  background: #ffffff !important;
+  border: 4px solid #14005d !important;
+  border-radius: 32px !important;
+  box-shadow: 0 10px 0 #14005d !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 25px 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+#block-1789642049276 .panel__body,
+#block-1789642049276 .panel__copy {
+  background: #ffffff !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1789642049276 .vk-space-explorer {
+  width: 100% !important;
+  padding: 28px 32px 30px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1789642049276 .vk-space-explorer__heading {
+  text-align: center !important;
+  margin: 0 0 24px !important;
+  padding: 0 !important;
+}
+
+#block-1789642049276 .vk-space-explorer__eyebrow {
+  color: #ff2f78 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+}
+
+#block-1789642049276 .vk-space-explorer__title {
+  color: #14005d !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#block-1789642049276 .vk-space-explorer__grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px 20px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1789642049276 .vk-space-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 105px !important;
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  border: 3px solid #14005d !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 0 #14005d !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  transition: transform .15s ease !important;
+}
+
+#block-1789642049276 .vk-space-card--creative { background: #ffd21f !important; }
+#block-1789642049276 .vk-space-card--hype { background: #ff2f78 !important; }
+#block-1789642049276 .vk-space-card--quiet { background: #AA8FFF !important; }
+#block-1789642049276 .vk-space-card--library { background: #20cf68 !important; }
+
+#block-1789642049276 .vk-space-card__text {
+  display: block !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#block-1789642049276 .vk-space-card__name {
+  display: block !important;
+  color: #14005d !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#block-1789642049276 .vk-space-card__description {
+  display: none !important;
+}
+
+#block-1789642049276 .vk-space-card--hype .vk-space-card__name {
+  color: #ffffff !important;
+}
+
+#block-1789642049276 .vk-space-card__arrow {
+  display: block !important;
+  flex: 0 0 auto !important;
+  color: #14005d !important;
+  font-size: 28px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  margin: 0 0 0 16px !important;
+  padding: 0 !important;
+}
+
+#block-1789642049276 .vk-space-card--hype .vk-space-card__arrow {
+  color: #ffffff !important;
+}
+
+#block-1789642049276 .vk-space-card:hover {
+  transform: translateY(-3px) !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 767px) {
+
+  #block-1789642049276 {
+    border-width: 4px !important;
+    border-radius: 26px !important;
+    box-shadow: 0 8px 0 #14005d !important;
+    margin: 20px 0 12px !important;
+  }
+
+  #block-1789642049276 .vk-space-explorer {
+    padding: 24px 18px 26px !important;
+  }
+
+  #block-1789642049276 .vk-space-explorer__heading {
+    margin-bottom: 20px !important;
+  }
+
+  #block-1789642049276 .vk-space-explorer__eyebrow {
+    font-size: 13px !important;
+  }
+
+  #block-1789642049276 .vk-space-explorer__title {
+    font-size: 25px !important;
+  }
+
+  #block-1789642049276 .vk-space-explorer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  #block-1789642049276 .vk-space-card {
+    min-height: 90px !important;
+    padding: 15px 18px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+  #block-1789642049276 .vk-space-card__name {
+    font-size: 17px !important;
+  }
+
+  #block-1789642049276 .vk-space-card__arrow {
+    font-size: 26px !important;
+    margin-left: 12px !important;
+  }
+
+}
+
+
+/* =========================================================
+   EXPLORE ANOTHER SPACE (Quiet Zone)
+   ========================================================= */
+
+#block-1790602332586 {
+  background: #ffffff !important;
+  border: 4px solid #14005d !important;
+  border-radius: 32px !important;
+  box-shadow: 0 10px 0 #14005d !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 25px 0 14px !important;
+  box-sizing: border-box !important;
+}
+
+#block-1790602332586 .panel__body,
+#block-1790602332586 .panel__copy {
+  background: #ffffff !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1790602332586 .vk-space-explorer {
+  width: 100% !important;
+  padding: 28px 32px 30px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1790602332586 .vk-space-explorer__heading {
+  text-align: center !important;
+  margin: 0 0 24px !important;
+  padding: 0 !important;
+}
+
+#block-1790602332586 .vk-space-explorer__eyebrow {
+  color: #ff2f78 !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 6px !important;
+  padding: 0 !important;
+}
+
+#block-1790602332586 .vk-space-explorer__title {
+  color: #14005d !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  line-height: 1.15 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#block-1790602332586 .vk-space-explorer__grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 18px 20px !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#block-1790602332586 .vk-space-card {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 105px !important;
+  padding: 16px 20px !important;
+  margin: 0 !important;
+  border: 3px solid #14005d !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 0 #14005d !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  transition: transform .15s ease !important;
+}
+
+#block-1790602332586 .vk-space-card--creative { background: #ffd21f !important; }
+#block-1790602332586 .vk-space-card--hype { background: #ff2f78 !important; }
+#block-1790602332586 .vk-space-card--quiet { background: #AA8FFF !important; }
+#block-1790602332586 .vk-space-card--library { background: #20cf68 !important; }
+
+#block-1790602332586 .vk-space-card__text {
+  display: block !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#block-1790602332586 .vk-space-card__name {
+  display: block !important;
+  color: #14005d !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#block-1790602332586 .vk-space-card__description {
+  display: none !important;
+}
+
+#block-1790602332586 .vk-space-card--hype .vk-space-card__name {
+  color: #ffffff !important;
+}
+
+#block-1790602332586 .vk-space-card__arrow {
+  display: block !important;
+  flex: 0 0 auto !important;
+  color: #14005d !important;
+  font-size: 28px !important;
+  font-weight: 400 !important;
+  line-height: 1 !important;
+  margin: 0 0 0 16px !important;
+  padding: 0 !important;
+}
+
+#block-1790602332586 .vk-space-card--hype .vk-space-card__arrow {
+  color: #ffffff !important;
+}
+
+#block-1790602332586 .vk-space-card:hover {
+  transform: translateY(-3px) !important;
+  text-decoration: none !important;
+}
+
+/* Hide default Kajabi button */
+#block-1790602332586 > .panel__body > .btn {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+
+  #block-1790602332586 {
+    border-width: 4px !important;
+    border-radius: 26px !important;
+    box-shadow: 0 8px 0 #14005d !important;
+    margin: 20px 0 12px !important;
+  }
+
+  #block-1790602332586 .vk-space-explorer {
+    padding: 24px 18px 26px !important;
+  }
+
+  #block-1790602332586 .vk-space-explorer__heading {
+    margin-bottom: 20px !important;
+  }
+
+  #block-1790602332586 .vk-space-explorer__eyebrow {
+    font-size: 13px !important;
+  }
+
+  #block-1790602332586 .vk-space-explorer__title {
+    font-size: 25px !important;
+  }
+
+  #block-1790602332586 .vk-space-explorer__grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  #block-1790602332586 .vk-space-card {
+    min-height: 90px !important;
+    padding: 15px 18px !important;
+    border-radius: 15px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+  }
+
+  #block-1790602332586 .vk-space-card__name {
+    font-size: 17px !important;
+  }
+
+  #block-1790602332586 .vk-space-card__arrow {
+    font-size: 26px !important;
+    margin-left: 12px !important;
+  }
+
+}
+
+
+/* =========================================================
+   EVEN SPACING BETWEEN SIDEBAR CARDS
+   ========================================================= */
+
+#section-product_badges,
+.panel--1668173402619,
+#block-1481845656651,
+#block-1668173402619,
+#block-1790602332586 {
+  margin-top: 0 !important;
+  margin-bottom: 25px !important;
+}
+
+
+/* =========================================================
+   DASHBOARD — "Choose where you would like to begin"
+   ========================================================= */
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] {
+  background: #ffffff !important;
+  border: 4px solid #14005d !important;
+  border-radius: 32px !important;
+  box-shadow: 0 10px 0 #14005d !important;
+  overflow: hidden !important;
+  margin: 25px 0 25px !important;
+  padding: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] > .panel__body {
+  background: #ffffff !important;
+  padding: 30px 32px 34px !important;
+  margin: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading {
+  display: block !important;
+  color: #14005d !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0 0 24px !important;
+  padding: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading .pull-right {
+  color: #aaa4c7 !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item:last-child {
+  margin-bottom: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a {
+  display: block !important;
+  width: 100% !important;
+  background: #ffffff !important;
+  border: 3px solid #14005d !important;
+  border-radius: 20px !important;
+  box-shadow: 0 7px 0 #14005d !important;
+  padding: 14px 18px !important;
+  margin: 0 !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a:hover {
+  transform: translateY(-2px) !important;
+  text-decoration: none !important;
+  box-shadow: 0 9px 0 #14005d !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media {
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-left {
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  padding: 0 20px 0 0 !important;
+  margin: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img {
+  width: 130px !important;
+  height: 78px !important;
+  overflow: hidden !important;
+  border-radius: 12px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: #f5f1ff !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-body {
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__title {
+  color: #14005d !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__text {
+  display: none !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-right {
+  flex: 0 0 150px !important;
+  width: 150px !important;
+  padding: 0 0 0 20px !important;
+  margin: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .progress {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .progress__bar {
+  width: 100% !important;
+  height: 7px !important;
+  background: #eeeeee !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .progress__fill {
+  height: 100% !important;
+  background: #14005d !important;
+  border-radius: 20px !important;
+}
+
+@media (max-width: 767px) {
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] {
+    border-radius: 26px !important;
+    box-shadow: 0 8px 0 #14005d !important;
+    margin: 20px 0 !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] > .panel__body {
+    padding: 22px 16px 26px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading {
+    font-size: 24px !important;
+    margin-bottom: 18px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__heading .pull-right {
+    font-size: 18px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item {
+    margin-bottom: 16px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item > a {
+    padding: 12px 14px !important;
+    border-radius: 16px !important;
+    box-shadow: 0 6px 0 #14005d !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-left {
+    flex: 0 0 90px !important;
+    width: 90px !important;
+    padding-right: 12px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__img {
+    width: 78px !important;
+    height: 52px !important;
+    border-radius: 9px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__title {
+    font-size: 16px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .syllabus__item .media-right {
+    flex: 0 0 70px !important;
+    width: 70px !important;
+    padding-left: 10px !important;
+  }
+
+  .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"] .progress__bar {
+    height: 6px !important;
+  }
+
+}
+
+
+/* =========================================================
+   2. CATEGORIES PAGE (Creative Corner / Categories)
+   Same row layout as the dashboard: picture | title | progress
+   ========================================================= */
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .panel.syllabus {
+  width: 100% !important;
+  margin: 0 0 32px !important;
+  background: #ffffff !important;
+  border: 3px solid #17006b !important;
+  border-radius: 28px !important;
+  box-shadow: 0 10px 0 #17006b !important;
+  overflow: hidden !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .panel__body {
+  display: block !important;
+  padding: 32px !important;
+  background: #ffffff !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .panel__body::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__heading::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__heading::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__heading .pull-right::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item > a::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item > a::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .media-body::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .media-right::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__img::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__img::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Heading */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__heading {
+  display: block !important;
+  position: relative !important;
+  margin: 0 0 24px !important;
+  padding: 0 40px 0 0 !important;
+  color: #17006b !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__heading .pull-right {
+  position: absolute !important;
+  top: 4px !important;
+  right: 0 !important;
+  float: none !important;
+  display: inline !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  color: #c9c5dd !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+/* Each category */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 16px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item:last-child {
+  margin-bottom: 0 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item > a {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  padding: 16px 20px !important;
+  background: #ffffff !important;
+  border: 3px solid #17006b !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 0 #17006b !important;
+  color: #17006b !important;
+  text-decoration: none !important;
+  box-sizing: border-box !important;
+  transition: transform 0.15s ease !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item > a:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* Row */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .media {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .media-left {
+  position: static !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  padding: 0 20px 0 0 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .media-body {
+  display: block !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .media-right {
+  position: static !important;
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: 24% !important;
+  min-width: 150px !important;
+  padding: 0 0 0 20px !important;
+}
+
+/* Thumbnail */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__img {
+  position: relative !important;
+  width: 145px !important;
+  min-width: 145px !important;
+  height: 82px !important;
+  background: #ffffff !important;
+  border: 2px solid #17006b !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__img img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+}
+
+/* Title */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__title {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #17006b !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__text {
+  display: none !important;
+}
+
+/* Progress */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .progress {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .progress__bar {
+  display: block !important;
+  width: 100% !important;
+  height: 9px !important;
+  background: #eeeeee !important;
+  border: 0 !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .progress__fill {
+  height: 100% !important;
+  background: #17006b !important;
+  border-radius: 999px !important;
+}
+
+
+/* =========================================================
+   3. CATEGORY PAGE — LESSONS (e.g. Feelings)
+   One lesson per row: picture | title + description | tick
+   ========================================================= */
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .panel.syllabus {
+  width: 100% !important;
+  margin: 0 0 32px !important;
+  background: #ffffff !important;
+  border: 3px solid #17006b !important;
+  border-radius: 28px !important;
+  box-shadow: 0 10px 0 #17006b !important;
+  overflow: hidden !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .panel__body {
+  display: block !important;
+  padding: 32px !important;
+  background: #ffffff !important;
+}
+
+/* Clear older add-ons (theme label, count pill, badges) */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .panel__body::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__heading::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .media-body::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .media-right::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__img::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__img::after {
+  content: none !important;
+  display: none !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__heading {
+  margin: 0 0 28px !important;
+  padding: 0 !important;
+  color: #17006b !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 30px !important;
+  font-weight: 800 !important;
+  line-height: 1.2 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* Lesson card */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item > a {
+  position: relative !important;
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  padding: 16px !important;
+  background: #ffffff !important;
+  border: 3px solid #17006b !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 0 #17006b !important;
+  color: inherit !important;
+  text-decoration: none !important;
+  overflow: hidden !important;
+  transform: none !important;
+  transition: transform 0.15s ease !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item > a:hover,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item > a:focus {
+  background: #ffffff !important;
+  border: 3px solid #17006b !important;
+  border-radius: 24px !important;
+  box-shadow: 0 8px 0 #17006b !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Row */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .media:before,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .media:after {
+  display: none !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media-left {
+  order: 0 !important;
+  float: none !important;
+  display: block !important;
+  flex: 0 0 240px !important;
+  width: 240px !important;
+  min-width: 240px !important;
+  height: auto !important;
+  max-height: none !important;
+  padding: 0 20px 0 0 !important;
+  overflow: visible !important;
+}
+
+/* Lesson picture */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__img {
+  position: relative !important;
+  width: 220px !important;
+  height: 124px !important;
+  min-width: 0 !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__img img {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  object-fit: cover !important;
+  object-position: center !important;
+}
+
+/* Lesson text */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media-body {
+  order: 0 !important;
+  float: none !important;
+  display: block !important;
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 20px !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__title {
+  margin: 0 0 8px !important;
+  padding: 0 !important;
+  color: #17006b !important;
+  font-family: Jumble, sans-serif !important;
+  font-size: 21px !important;
+  font-weight: 700 !important;
+  line-height: 1.25 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__text {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #6259a6 !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__text:empty {
+  display: none !important;
+}
+
+/* Tick / progress */
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media-right {
+  position: static !important;
+  order: 0 !important;
+  float: none !important;
+  display: block !important;
+  flex: 0 0 70px !important;
+  width: 70px !important;
+  min-width: 70px !important;
+  padding: 0 0 0 10px !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .progress {
+  margin: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .progress__icon {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: #17006b !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .progress__bar {
+  display: block !important;
+  width: 50px !important;
+  height: 8px !important;
+  background: #eeeeee !important;
+  border-radius: 20px !important;
+  overflow: hidden !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .progress__fill {
+  height: 100% !important;
+  background: #17006b !important;
+  border-radius: 20px !important;
+}
+
+
+/* =========================================================
+   4. LESSON PAGE + COMMENTS — card styling only
+   (content untouched)
+   ========================================================= */
+
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-post_body .panel,
+html:not(#vk):not(#vk-m):not(#vk-cc) #section-post_comments .panel {
+  background: #ffffff !important;
+  border: 4px solid #14005d !important;
+  border-radius: 28px !important;
+  box-shadow: 0 12px 0 #14005d !important;
+  overflow: hidden !important;
+}
+
+
+/* =========================================================
+   5. MOBILE — categories + lessons
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .panel__body,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .panel__body {
+    padding: 20px !important;
+  }
+
+  /* Categories */
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item > a {
+    padding: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__heading {
+    font-size: 24px !important;
+    margin-bottom: 18px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .media-left {
+    padding-right: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__img {
+    width: 100px !important;
+    min-width: 100px !important;
+    height: 60px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__item .media-right {
+    width: 25% !important;
+    min-width: 70px !important;
+    padding-left: 10px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-categories_body .syllabus__title {
+    font-size: 17px !important;
+  }
+
+  /* Lessons: picture left, text right */
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__heading {
+    font-size: 24px !important;
+    margin-bottom: 20px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item > a {
+    padding: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media {
+    display: grid !important;
+    grid-template-columns: 110px 1fr !important;
+    gap: 14px !important;
+    align-items: center !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media-left {
+    width: 110px !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__img {
+    width: 110px !important;
+    height: 72px !important;
+    border-radius: 12px !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media-body {
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__title {
+    font-size: 16px !important;
+    line-height: 1.3 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .syllabus__text {
+    font-size: 13px !important;
+    line-height: 1.4 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-category_body .syllabus__item .media-right {
+    display: none !important;
+  }
+
+}
+
+
+/* =========================================================
+   QUIET ZONE — MOBILE: 2 × 2 IMAGES + EQUAL CARD WIDTHS
+      "html:not(#vk):not(#vk-m):not(#vk-cc)" is only a strength
+   booster so these rules win. Keep it as it is.
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+  /* ---------- 1. FOUR IMAGES → 2 ON TOP, 2 UNDERNEATH ----------
+     Finds the box that holds exactly 4 items that each contain
+     an image (bare, inside a link, or inside a div). */
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) :not(#badgecss):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 0 18px 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) :not(#badgecss):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) > * {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    flex: none !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) :not(#badgecss):has(> :nth-child(4)):not(:has(> :nth-child(5))):has(> img:nth-child(1), > :nth-child(1) img):has(> img:nth-child(2), > :nth-child(2) img):has(> img:nth-child(3), > :nth-child(3) img):has(> img:nth-child(4), > :nth-child(4) img) img {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+
+  /* ---------- 2. WELCOME CARD AS WIDE AS THE OTHER CARDS ----------
+     Removes Kajabi's side padding around the welcome card */
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438),
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__body,
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__block,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding: 22px 18px !important;
+    border-width: 3px !important;
+    border-radius: 22px !important;
+    box-shadow: 0 7px 0 #14005d !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* ---------- 3. EVERY CARD THE SAME WIDTH ---------- */
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel.syllabus[kjb-settings-id="sections_product_syllabus_settings_type"],
+  html:not(#vk):not(#vk-m):not(#vk-cc) .panel--1668173402619,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges .badgesize,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668173402619,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1481845656651,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1481845715286,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1789640023931,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1789642049276,
+  html:not(#vk):not(#vk-m):not(#vk-cc) #block-1790602332586 {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+  }
+
+
+  /* ---------- 4. STICKERS — EVENLY SPACED CIRCLES ---------- */
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges #badgecss {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px 14px !important;
+    justify-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges .badgecontainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges .badgecontainer img {
+    margin: 0 auto 8px !important;
+  }
+
+  /* No sideways scrolling on phones */
+  html:not(#vk):not(#vk-m):not(#vk-cc) body {
+    overflow-x: clip !important;
+  }
+
+}
+
+
+/* =========================================================
+   SAFETY NET — hide any leftover theme preview
+   ========================================================= */
+
+.vk-theme-preview {
+  display: none !important;
+}
