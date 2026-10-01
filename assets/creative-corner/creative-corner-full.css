@@ -1424,3 +1424,24 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #section-post_comments .panel {
   }
 
 }
+
+/* DESKTOP + MOBILE — welcome/image card as wide as the categories card */
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438),
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__body,
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__block,
+html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438,
+html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 > div {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438),
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__body,
+html:not(#vk):not(#vk-m):not(#vk-cc) .panel:has(#block-1668075420438) .panel__block,
+html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
