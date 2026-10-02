@@ -1479,3 +1479,24 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 {
   }
 
 }
+
+/* NO WASHED-OUT IMAGES ON HOVER */
+html:not(#vk):not(#vk-m):not(#vk-cc) img,
+html:not(#vk):not(#vk-m):not(#vk-cc) a:hover img,
+html:not(#vk):not(#vk-m):not(#vk-cc) a:focus img,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover img,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item a:hover .syllabus__img,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item a:hover .syllabus__img img {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__img::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__img::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item a:hover .syllabus__img::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item a:hover .syllabus__img::after {
+  content: none !important;
+  display: none !important;
+  opacity: 0 !important;
+}
