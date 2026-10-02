@@ -1445,3 +1445,37 @@ html:not(#vk):not(#vk-m):not(#vk-cc) #block-1668075420438 {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+/* MOBILE — stickers evenly spaced, no overlapping */
+@media (max-width: 767px) {
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges #badgecss {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 20px 14px !important;
+    justify-items: center !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges .badgecontainer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  html:not(#vk):not(#vk-m):not(#vk-cc) #section-product_badges .badgecontainer img {
+    flex-shrink: 0 !important;
+    width: 68px !important;
+    height: 68px !important;
+    max-width: 68px !important;
+    margin: 0 auto 8px !important;
+  }
+
+}
