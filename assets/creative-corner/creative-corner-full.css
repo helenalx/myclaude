@@ -1500,3 +1500,38 @@ html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item a:hover .syllabus__img::aft
   display: none !important;
   opacity: 0 !important;
 }
+
+/* NO FADE ON HOVER — dashboard, categories + category page (stronger) */
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item > a,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item > a:hover,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item > a:focus,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item > a:active,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .media,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .media,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .media-left,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .media-left,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .syllabus__img,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .syllabus__img,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .syllabus__img img,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .syllabus__img img,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .syllabus__img .thumb,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .syllabus__img .thumb {
+  opacity: 1 !important;
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .media-left::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .media-left::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .syllabus__img::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item .syllabus__img::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .media-left::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .media-left::after,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .syllabus__img::before,
+html:not(#vk):not(#vk-m):not(#vk-cc) .syllabus__item:hover .syllabus__img::after {
+  content: none !important;
+  display: none !important;
+}
