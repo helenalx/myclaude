@@ -1,0 +1,7 @@
+/* LESSON PLAYER — white background instead of black */
+html:not(#vk):not(#vk-m):not(#vk-cc) .player .player__video,
+html:not(#vk):not(#vk-m):not(#vk-cc) .player .main-content-video,
+html:not(#vk):not(#vk-m):not(#vk-cc) .player--dark .player__video {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+}
