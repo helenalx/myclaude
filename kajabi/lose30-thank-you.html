@@ -1,0 +1,95 @@
+<style>
+  .l30-wrap { max-width: 1180px; margin: 0 auto; padding: 0; box-sizing: border-box; }
+  .l30-wrap *, .l30-wrap *::before, .l30-wrap *::after { box-sizing: border-box; }
+
+  .l30-top { text-align: center; padding: 0 30px 34px; }
+  .l30-top h2 { margin: 0; font-size: 28px; line-height: 1.25; color: #4b352b; font-weight: 800; }
+
+  .l30-row { display: flex; flex-wrap: wrap; align-items: stretch; justify-content: center; }
+
+  .l30-left { flex: 1 1 560px; min-width: 0; background: rgba(255,255,255,0.82); padding: 48px 56px; }
+  .l30-left-inner { max-width: 500px; margin: 0 auto; }
+
+  .l30-eyebrow { margin: 0 0 18px; font-size: 22px; line-height: 1.3; color: #b5654a; font-style: italic; }
+  .l30-heading { margin: 0 0 24px; font-size: 38px; line-height: 1.1; color: #4b352b; font-weight: 800; }
+  .l30-intro { margin: 0 0 22px; font-size: 20px; line-height: 1.6; color: #4b352b; }
+  .l30-quote { border-left: 4px solid #b35f43; padding-left: 22px; margin: 0 0 24px; }
+  .l30-quote p { margin: 0; font-size: 20px; line-height: 1.5; color: #4b352b; font-weight: bold; }
+  .l30-body { margin: 0 0 20px; font-size: 19px; line-height: 1.6; color: #4b352b; }
+  .l30-brand { margin: 0 0 30px; font-size: 21px; line-height: 1.55; color: #b35f43; font-style: italic; font-weight: bold; }
+
+  .l30-cta-wrap { margin: 0 0 12px; }
+  .l30-cta { display: inline-block; background: #b35f43; color: #ffffff !important; text-decoration: none; padding: 16px 24px; font-size: 14px; line-height: 1.2; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 800; border-radius: 4px; text-align: center; }
+  .l30-note { margin: 0; font-size: 13px; line-height: 1.5; color: #8a7a70; }
+
+  .l30-right { flex: 1 1 500px; min-width: 0; background: #f7f1ec; padding: 38px 38px 42px; display: flex; align-items: center; justify-content: center; }
+  .l30-img-box { width: 100%; max-width: 500px; display: flex; align-items: center; justify-content: center; }
+  .l30-img { width: 100%; max-width: 490px; height: auto; display: block; filter: drop-shadow(0 18px 24px rgba(76,52,40,0.16)); }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .l30-left, .l30-right { flex: 1 1 100%; }
+    .l30-left { padding: 40px 40px; }
+    .l30-heading { font-size: 34px; }
+  }
+
+  /* Mobile */
+  @media (max-width: 767px) {
+    .l30-top { padding: 0 16px 24px; }
+    .l30-top h2 { font-size: 22px; }
+
+    /* Image first on mobile so the guide is seen right away */
+    .l30-right { order: -1; padding: 24px 16px; }
+    .l30-img { max-width: 320px; }
+
+    .l30-left { padding: 32px 20px; }
+    .l30-left-inner { text-align: left; }
+    .l30-eyebrow { font-size: 18px; margin-bottom: 12px; }
+    .l30-heading { font-size: 28px; line-height: 1.15; margin-bottom: 18px; }
+    .l30-intro, .l30-quote p { font-size: 17px; }
+    .l30-quote { padding-left: 16px; }
+    .l30-body { font-size: 17px; }
+    .l30-brand { font-size: 18px; margin-bottom: 24px; }
+
+    .l30-cta { display: block; width: 100%; padding: 18px 16px; font-size: 14px; }
+    .l30-note { text-align: center; }
+  }
+</style>
+
+<div class="l30-wrap">
+  <!-- CENTERED INBOX MESSAGE -->
+  <div class="l30-top">
+    <h2>Your Lose 30 Guide is on its way to your inbox.</h2>
+  </div>
+
+  <!-- TWO COLUMN SECTION -->
+  <div class="l30-row">
+    <!-- LEFT -->
+    <div class="l30-left">
+      <div class="l30-left-inner">
+        <p class="l30-eyebrow">While you wait...</p>
+        <h2 class="l30-heading">You have the plan. Now let’s help you actually follow through.</h2>
+        <p class="l30-intro">Your guide will show you what to focus on to lose your first 30 pounds.</p>
+
+        <div class="l30-quote">
+          <p>But knowing what to do isn’t the hard part.<br /> Doing it consistently is.</p>
+        </div>
+
+        <p class="l30-body">That’s exactly what we help you do inside the <strong>Consistency Circle.</strong></p>
+        <p class="l30-brand">Structure. Accountability. Support. And a community of women working toward the same goal.</p>
+
+        <div class="l30-cta-wrap">
+          <a class="l30-cta" href="https://www.skool.com/consistencycircle/about" target="_blank" rel="noopener noreferrer">HELP ME LOSE 30 POUNDS →</a>
+        </div>
+        <p class="l30-note">You’ll be taken to our secure community page to see everything included and join.</p>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="l30-right">
+      <div class="l30-img-box">
+        <img class="l30-img" src="https://tameikag.mykajabi.com/resource_redirect/downloads/file-uploads/sites/2148702770/themes/2166727958/downloads/5014bfe-c6af-c12f-bc2-71474d83c57b_30_pounds.png" alt="Lose 30 Pounds Guide" />
+      </div>
+    </div>
+  </div>
+</div>
