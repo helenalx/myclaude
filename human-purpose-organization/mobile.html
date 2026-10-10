@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Human Purpose Organization</title>
+<meta name="description" content="Investing in Human Potential — capital with purpose, invested today and multiplied across generations." />
+<meta name="theme-color" content="#14332b" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  /* =========================================================
+     HUMAN PURPOSE ORGANIZATION — MOBILE (≤ 767px)
+     Swap photos: set --img on any .photo element, e.g.
+     style="--img:url('https://your-cdn/photo.jpg')"
+     ========================================================= */
+  :root{
+    --green-900:#0f2a23;
+    --green-800:#14332b;
+    --green-700:#1b4136;
+    --green-600:#24503f;
+    --gold:#d18b3c;
+    --gold-soft:#e3a35a;
+    --cream:#f4f2ed;
+    --paper:#faf9f6;
+    --ink:#1d2a25;
+    --muted:#5c6762;
+    --line:#e2ded5;
+    --white:#ffffff;
+
+    --gutter:20px;
+    --radius:14px;
+    --font-head:"Manrope",system-ui,sans-serif;
+    --font-serif:"Cormorant Garamond",Georgia,serif;
+    --font-body:"Poppins",system-ui,sans-serif;
+  }
+
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font-family:var(--font-body);font-size:15px;line-height:1.6;
+    overflow-x:hidden;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:var(--font-head);margin:0;letter-spacing:-.02em;line-height:1.12}
+  p{margin:0}
+  .wrap{padding:0 var(--gutter)}
+  .section{padding:64px 0}
+
+  /* ---------- Photo placeholders (replace with real images) ---------- */
+  .photo{
+    position:relative;overflow:hidden;background-color:var(--green-700);
+    background-image:var(--img, linear-gradient(135deg,#2c5a4b 0%,#1b4136 55%,#c98a3d 140%));
+    background-size:cover;background-position:center;
+  }
+
+  /* ---------- Eyebrow / labels ---------- */
+  .eyebrow{
+    display:flex;align-items:center;gap:12px;
+    font-family:var(--font-head);font-size:11px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    margin-bottom:16px;
+  }
+  .eyebrow::after{content:"";width:40px;height:1px;background:currentColor;opacity:.4}
+  .eyebrow.light{color:rgba(255,255,255,.7)}
+  .eyebrow.dark{color:var(--green-800)}
+  .pill{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:6px 12px;border-radius:999px;font-size:12px;font-weight:600;
+    font-family:var(--font-head);
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    min-height:48px;padding:12px 22px;border-radius:4px;border:0;cursor:pointer;
+    font-family:var(--font-head);font-size:14px;font-weight:700;letter-spacing:.01em;
+    transition:transform .15s ease, background-color .2s ease;
+  }
+  .btn:active{transform:scale(.98)}
+  .btn-gold{background:var(--gold);color:var(--green-900)}
+  .btn-gold:hover{background:var(--gold-soft)}
+  .btn-green{background:var(--green-800);color:var(--white)}
+  .btn-block{width:100%}
+  .arrow{font-size:16px;line-height:1}
+
+  /* =========================================================
+     HEADER + MOBILE MENU
+     ========================================================= */
+  .header{
+    position:sticky;top:0;z-index:50;background:var(--cream);
+    border-bottom:1px solid transparent;transition:border-color .2s, box-shadow .2s;
+  }
+  .header.scrolled{border-color:var(--line);box-shadow:0 4px 18px rgba(0,0,0,.06)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .logo{display:flex;align-items:center;gap:10px}
+  .logo svg{width:34px;height:34px;flex:none}
+  .logo-text{
+    border-left:1px solid currentColor;padding-left:10px;
+    font-family:var(--font-head);font-size:10.5px;font-weight:700;
+    letter-spacing:.08em;line-height:1.25;text-transform:uppercase;
+  }
+  .menu-btn{
+    width:46px;height:46px;border-radius:8px;border:0;background:var(--green-800);
+    display:grid;place-items:center;cursor:pointer;
+  }
+  .menu-btn span{display:block;width:20px;height:2px;background:#fff;border-radius:2px;position:relative;transition:.25s}
+  .menu-btn span::before,.menu-btn span::after{
+    content:"";position:absolute;left:0;width:20px;height:2px;background:#fff;border-radius:2px;transition:.25s;
+  }
+  .menu-btn span::before{top:-6px}
+  .menu-btn span::after{top:6px}
+  .menu-open .menu-btn span{background:transparent}
+  .menu-open .menu-btn span::before{top:0;transform:rotate(45deg)}
+  .menu-open .menu-btn span::after{top:0;transform:rotate(-45deg)}
+
+  .drawer{
+    position:fixed;inset:68px 0 0 0;z-index:49;background:var(--green-800);color:#fff;
+    padding:28px var(--gutter) 40px;display:flex;flex-direction:column;
+    transform:translateY(-8px);opacity:0;visibility:hidden;transition:.25s ease;overflow-y:auto;
+  }
+  .menu-open .drawer{transform:none;opacity:1;visibility:visible}
+  .menu-open{overflow:hidden}
+  .drawer nav a{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12);
+    font-family:var(--font-head);font-size:20px;font-weight:600;
+  }
+  .drawer nav a::after{content:"→";color:var(--gold)}
+  .drawer .btn{margin-top:32px}
+  .drawer small{margin-top:auto;padding-top:32px;color:rgba(255,255,255,.55);font-size:12px}
+
+  /* =========================================================
+     HERO
+     ========================================================= */
+  .hero{background:var(--green-800);color:#fff;overflow:hidden}
+  .hero-copy{padding-top:36px;padding-bottom:32px}
+  .hero .pill{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;margin-bottom:20px}
+  .avatars{display:flex}
+  .avatars i{
+    width:20px;height:20px;border-radius:50%;border:2px solid var(--green-800);margin-left:-6px;
+    background:linear-gradient(135deg,#c98a3d,#5d3b22);
+  }
+  .avatars i:first-child{margin-left:0}
+  .avatars i:nth-child(2){background:linear-gradient(135deg,#8a6a52,#3a2a20)}
+  .avatars i:nth-child(3){background:linear-gradient(135deg,#d9b38c,#7a4e2f)}
+  .hero h1{font-size:clamp(38px,11vw,48px);font-weight:700}
+  .hero h1 span{display:block;color:var(--gold)}
+  .hero .lead{margin-top:20px;font-style:italic;font-weight:600;font-size:15px;line-height:1.55}
+  .hero .body{margin-top:14px;color:rgba(255,255,255,.78);font-size:14px}
+  .hero .btn{margin-top:26px}
+  .hero-photo{
+    height:340px;
+    --img:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=70');
+  }
+  .hero-photo::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,var(--green-800) 0%,rgba(20,51,43,0) 28%);
+  }
+
+  /* ---------- Stats ---------- */
+  .stats{background:var(--green-900);color:#fff;padding:36px 0 40px}
+  .stats-intro{padding-bottom:24px;margin-bottom:8px;border-bottom:1px solid rgba(255,255,255,.12)}
+  .stats-intro .tag{font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+  .stats-intro p{margin-top:8px;font-size:14px;color:rgba(255,255,255,.85)}
+  .stats-grid{display:grid;grid-template-columns:1fr 1fr}
+  .stat{padding:22px 0 6px}
+  .stat:nth-child(odd){padding-right:16px;border-right:1px solid rgba(255,255,255,.12)}
+  .stat:nth-child(even){padding-left:20px}
+  .stat:nth-child(-n+2){border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:22px}
+  .stat b{display:block;font-family:var(--font-head);font-size:32px;font-weight:700;letter-spacing:-.02em}
+  .stat span{display:block;margin-top:4px;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.65)}
+
+  /* =========================================================
+     PROVEN IMPACT
+     ========================================================= */
+  .impact .pill{border:1px solid var(--gold);color:var(--green-800);margin-bottom:16px}
+  .impact .pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
+  .impact h2{font-size:30px;font-weight:800;color:var(--green-800)}
+  .impact .copy{margin-top:16px;color:var(--muted)}
+  .arches{position:relative;height:330px;margin:36px 0 28px}
+  .arch{position:absolute;border-radius:999px;box-shadow:0 18px 40px rgba(0,0,0,.12)}
+  .arch-1{left:0;top:0;width:58%;height:300px;
+    --img:url('https://images.unsplash.com/photo-1529390079861-591de354faf5?w=700&q=70')}
+  .arch-2{right:0;bottom:0;width:52%;height:230px;border:6px solid var(--paper);
+    --img:url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=700&q=70')}
+  .feature-card{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;box-shadow:0 10px 30px rgba(20,51,43,.06);
+  }
+  .feature-card .photo{height:180px;
+    --img:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=70')}
+  .feature-card .inner{padding:22px}
+  .coin{width:40px;height:40px;border-radius:50%;background:var(--gold);display:grid;place-items:center;margin-bottom:14px}
+  .feature-card h3{font-size:17px;font-weight:800;color:var(--green-800);padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .feature-card p{margin-top:12px;display:flex;gap:10px;font-size:14px;color:var(--muted)}
+  .feature-card p::before{content:"";flex:none;margin-top:7px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .impact .btn{margin-top:24px}
+
+  /* =========================================================
+     FROM EVIDENCE TO LASTING SCALE
+     ========================================================= */
+  .scale{background:var(--green-900);color:#fff}
+  .serif-title{font-family:var(--font-serif);font-weight:500;letter-spacing:-.01em;line-height:1.05}
+  .serif-title em{display:block;font-style:italic;color:var(--gold)}
+  .scale h2{font-size:42px}
+  .scale .copy{margin-top:18px;font-size:14px;color:rgba(255,255,255,.75)}
+  .quote-line{
+    margin-top:22px;padding-left:14px;border-left:2px solid var(--gold);
+    font-size:11px;letter-spacing:.12em;text-transform:uppercase;line-height:1.7;color:rgba(255,255,255,.8);
+  }
+  .scale .photo{height:220px;border-radius:6px;margin:32px 0 16px;
+    --img:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=70')}
+  .steps{display:grid;gap:1px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
+  .step{background:var(--green-700);padding:22px 20px;position:relative}
+  .step .num{font-family:var(--font-head);font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.1em}
+  .step .ico{position:absolute;top:20px;right:20px;opacity:.55}
+  .step h3{margin-top:10px;font-size:17px;font-weight:700}
+  .step p{margin-top:8px;font-size:13.5px;color:rgba(255,255,255,.7)}
+
+  /* =========================================================
+     WHERE OPPORTUNITY BEGINS
+     ========================================================= */
+  .opportunity{background:var(--cream)}
+  .opportunity h2{font-size:30px;font-weight:800;color:var(--green-800)}
+  .opportunity .copy{margin-top:14px;color:var(--muted);padding-bottom:28px;border-bottom:1px solid var(--line)}
+  .areas{display:grid;gap:16px;margin-top:28px}
+  .area{min-height:360px;border-radius:6px;display:flex;align-items:flex-end;color:#fff}
+  .area::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,35,0) 30%,rgba(15,42,35,.95) 100%)}
+  .area .inner{position:relative;padding:24px}
+  .area .tag{font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .area h3{margin-top:6px;font-size:28px;font-weight:700}
+  .area p{margin-top:8px;font-size:13.5px;color:rgba(255,255,255,.82)}
+  .area-edu{--img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=70')}
+  .area-inc{--img:url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=70')}
+
+  /* =========================================================
+     CURRENT INVESTMENTS
+     ========================================================= */
+  .portfolio h2{font-size:30px;font-weight:800;color:var(--green-800)}
+  .portfolio h2 span{display:block;color:var(--gold)}
+  .portfolio .copy{margin-top:14px;color:var(--muted)}
+  .cards{display:grid;gap:24px;margin-top:32px}
+  .p-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .p-card .photo{height:230px}
+  .badge{
+    position:absolute;top:0;left:0;padding:6px 12px;background:var(--gold);color:var(--green-900);
+    font-family:var(--font-head);font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  }
+  .badge.teal{background:#2f8f86;color:#fff;left:auto;right:0}
+  .p-card .inner{padding:24px 22px 26px}
+  .p-card .tag{font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+  .p-card .tag.teal{color:#2f8f86}
+  .p-card h3{margin-top:8px;font-size:26px;font-weight:800;color:var(--green-800)}
+  .p-card p{margin-top:12px;font-size:14px;color:var(--muted)}
+  .p-card .meta{
+    margin-top:18px;padding-top:16px;border-top:1px solid var(--line);
+    font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--green-800);
+  }
+  .p-card .btn{margin-top:20px}
+  .p-card.alt{background:var(--cream)}
+  .pc-1{--img:url('https://images.unsplash.com/photo-1544717305-2782549b5136?w=900&q=70')}
+  .pc-2{--img:url('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900&q=70')}
+
+  /* =========================================================
+     MEASURING WHAT MATTERS
+     ========================================================= */
+  .measure{background:var(--cream)}
+  .measure h2{font-size:30px;font-weight:800;color:var(--green-800)}
+  .measure .copy{margin-top:14px;color:var(--muted)}
+  .chart-card{
+    margin:30px 0 8px;border-radius:6px;background:linear-gradient(180deg,#f8f5ef,#ece6db);
+    border:1px solid var(--line);height:260px;position:relative;overflow:hidden;
+  }
+  .chart-card svg{position:absolute;inset:0;width:100%;height:100%}
+  .chart-legend{
+    position:absolute;left:14px;right:14px;bottom:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;
+  }
+  .chart-legend div{
+    background:#fff;padding:10px 4px;text-align:center;
+    font-family:var(--font-head);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green-800);
+  }
+  .chart-legend b{display:block;color:var(--gold);font-size:10px;margin-bottom:2px}
+  .principles{margin-top:24px;border-top:1px solid var(--line)}
+  .principle{display:grid;grid-template-columns:28px 1fr;gap:6px;padding:18px 0;border-bottom:1px solid var(--line)}
+  .principle .n{font-family:var(--font-head);font-size:11px;font-weight:800;color:var(--gold);padding-top:2px}
+  .principle h3{font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green-800)}
+  .principle p{margin-top:6px;font-size:13.5px;color:var(--muted)}
+  .measure .btn{margin-top:28px}
+
+  /* =========================================================
+     INVESTORS CTA
+     ========================================================= */
+  .invite{background:var(--gold);color:var(--green-900);position:relative;overflow:hidden}
+  .invite::before,.invite::after{
+    content:"";position:absolute;border-radius:50%;border:1px solid rgba(15,42,35,.35);pointer-events:none;
+  }
+  .invite::before{width:300px;height:300px;right:-140px;top:-120px}
+  .invite::after{width:380px;height:380px;right:-200px;top:-150px}
+  .invite .eyebrow{color:var(--green-900)}
+  .invite h2{font-size:44px;position:relative}
+  .invite h2 em{color:#fff}
+  .invite .rule{height:1px;background:rgba(15,42,35,.3);margin:24px 0}
+  .invite p{font-size:14px;line-height:1.7;position:relative}
+  .invite p + p{margin-top:14px}
+  .invite strong{font-weight:600}
+  .invite .btn{margin-top:28px}
+
+  /* =========================================================
+     FOOTER
+     ========================================================= */
+  .footer{background:var(--green-900);color:#fff;padding:52px 0 calc(28px + env(safe-area-inset-bottom))}
+  .footer .logo{color:#fff}
+  .footer .tagline{margin-top:18px;font-family:var(--font-serif);font-size:30px;line-height:1.1}
+  .f-cols{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+  .f-cols h4{margin:0 0 12px;font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+  .f-cols a{display:block;padding:6px 0;font-size:14px;color:rgba(255,255,255,.88)}
+  .legal{margin-top:32px;font-size:12px;line-height:1.7;color:rgba(255,255,255,.6)}
+  .f-bottom{margin-top:28px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12);display:grid;gap:16px;justify-items:center;text-align:center}
+  .social{display:flex;gap:10px}
+  .social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center}
+  .social svg{width:16px;height:16px;fill:#fff}
+  .f-bottom small{font-size:12px;color:rgba(255,255,255,.6)}
+
+  .to-top{
+    position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;
+    width:46px;height:46px;border-radius:50%;border:0;background:var(--gold);color:var(--green-900);
+    font-size:20px;box-shadow:0 8px 20px rgba(0,0,0,.2);cursor:pointer;
+    opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;
+  }
+  .to-top.show{opacity:1;visibility:visible;transform:none}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+
+  /* Slightly roomier on large phones / small tablets */
+  @media (min-width:480px){
+    :root{--gutter:28px}
+    .hero-photo{height:420px}
+    .arches{height:400px}
+    .arch-1{height:370px}
+    .arch-2{height:280px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="Human Purpose Organization home">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <circle cx="20" cy="26" r="11"/><circle cx="20" cy="7" r="3" fill="currentColor"/>
+        <path d="M20 10v18M13 17h14M20 28l-6 7M20 28l6 7"/>
+      </svg>
+      <span class="logo-text">Human<br>Purpose<br>Organization</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" aria-hidden="true">
+  <nav>
+    <a href="#about">About</a>
+    <a href="#">Board of Directors</a>
+    <a href="#">Our Team</a>
+    <a href="#">Sponsors</a>
+    <a href="#invest">Become an Investor</a>
+  </nav>
+  <a href="#invest" class="btn btn-gold btn-block">Become an Investor <span class="arrow">↗</span></a>
+  <small>Purpose. Accountability. Transformation.</small>
+</div>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="wrap hero-copy reveal">
+      <span class="pill"><span class="avatars"><i></i><i></i><i></i></span>110,000+ Lives Reached</span>
+      <h1>Investing in <span>Human Potential</span></h1>
+      <p class="lead">Your return isn't what comes back to you, but what moves forward because of you. This is capital with purpose — invested today and multiplied across generations.</p>
+      <p class="body">Brazil doesn't have a talent problem — it has a system problem. We identify, fund, and strengthen organizations breaking the cycle of poverty through education and sustainable income generation.</p>
+      <a href="#impact" class="btn btn-gold">Explore Our Impact <span class="arrow">↘</span></a>
+    </div>
+    <div class="photo hero-photo" role="img" aria-label="Three smiling children giving a thumbs up"></div>
+  </section>
+
+  <!-- ================= STATS ================= -->
+  <section class="stats" aria-label="Impact in numbers">
+    <div class="wrap">
+      <div class="stats-intro">
+        <div class="tag">Purpose Already in Motion</div>
+        <p>Verified impact achieved through The Human Project.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat"><b data-count="9900" data-suffix="+">9,900+</b><span>Lives reached</span></div>
+        <div class="stat"><b data-count="7">7</b><span>Municipalities</span></div>
+        <div class="stat"><b data-count="1">1</b><span>Brazilian states</span></div>
+        <div class="stat"><b data-count="1" data-suffix="+">1+</b><span>Years of proven impact</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROVEN IMPACT ================= -->
+  <section class="section impact" id="about">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="pill">100,000+ Lives Reached</span>
+        <h2>Where Proven Impact Meets Long-Term Investment.</h2>
+        <p class="copy">We are not here to reinvent the wheel. We are here to find those already turning it — organizations doing focused, measurable work to break the poverty cycle — and back them with the capital, partnership, and expertise they need to expand their impact and reach more communities.</p>
+      </div>
+
+      <div class="arches reveal" aria-hidden="true">
+        <div class="photo arch arch-1"></div>
+        <div class="photo arch arch-2"></div>
+      </div>
+
+      <div class="feature-card reveal">
+        <div class="photo" role="img" aria-label="Students working together on a project"></div>
+        <div class="inner">
+          <div class="coin" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14332b" stroke-width="2"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+          </div>
+          <h3>Evidence-Based Investing</h3>
+          <p>We invest only in organizations with measurable outcomes.</p>
+        </div>
+      </div>
+
+      <a href="#invest" class="btn btn-gold btn-block">Become an Investor <span class="arrow">↗</span></a>
+    </div>
+  </section>
+
+  <!-- ================= FROM EVIDENCE TO SCALE ================= -->
+  <section class="section scale">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow light">What we invest in</div>
+        <h2 class="serif-title">From evidence <em>to lasting scale.</em></h2>
+        <p class="copy">Human Purpose Organization combines disciplined selection, patient capital, organizational support, and clear accountability so proven ideas can become durable systems of opportunity.</p>
+        <p class="quote-line">Every investment is backed by accountability, transparency, and long-term commitment.</p>
+      </div>
+
+      <div class="photo reveal" role="img" aria-label="Classroom with students learning"></div>
+
+      <div class="steps reveal">
+        <article class="step">
+          <span class="num">01</span>
+          <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><path d="m4 20 8-8M14 4l6 6-8 8-6-6z"/></svg>
+          <h3>Identify what works</h3>
+          <p>We find organizations with validated models, credible leaders, and evidence of lasting, human outcomes.</p>
+        </article>
+        <article class="step">
+          <span class="num">02</span>
+          <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 15l3-3 2 2 3-4"/></svg>
+          <h3>Invest for the long term</h3>
+          <p>We provide patient capital aligned with transformation — not short grant cycles or activity counts.</p>
+        </article>
+        <article class="step">
+          <span class="num">03</span>
+          <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg>
+          <h3>Strengthen the organization</h3>
+          <p>We connect leaders with expertise, research, partnerships, and systems that expand capacity.</p>
+        </article>
+        <article class="step">
+          <span class="num">04</span>
+          <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c.8-3.5 3-5 6-5s5.2 1.5 6 5M15 15c3 0 5 1.5 6 5"/></svg>
+          <h3>Measure and scale</h3>
+          <p>We strengthen evidence, track meaningful outcomes, and direct new capital toward what proves effective.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= WHERE OPPORTUNITY BEGINS ================= -->
+  <section class="section opportunity">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">What we invest in</div>
+        <h2>Where Opportunity Begins.</h2>
+        <p class="copy">Education and sustainable income generation create the conditions for communities to become architects of their own future and permanently break the cycle of poverty.</p>
+      </div>
+      <div class="areas">
+        <article class="photo area area-edu reveal">
+          <div class="inner">
+            <span class="tag">Investment Area 01</span>
+            <h3>Education</h3>
+            <p>Building human potential through evidence-based learning that creates opportunity for future generations.</p>
+          </div>
+        </article>
+        <article class="photo area area-inc reveal">
+          <div class="inner">
+            <span class="tag">Investment Area 02</span>
+            <h3>Sustainable income</h3>
+            <p>Creating lasting economic opportunity that empowers communities to thrive independently.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CURRENT INVESTMENTS ================= -->
+  <section class="section portfolio">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Our current investments</div>
+        <h2>Selected with evidence. <span>Backed with conviction.</span></h2>
+        <p class="copy">A focused portfolio of organizations with validated models, measurable outcomes, and the potential to create transformation at scale.</p>
+      </div>
+
+      <div class="cards">
+        <article class="p-card reveal">
+          <div class="photo pc-1" role="img" aria-label="The Human Project participants">
+            <span class="badge">Portfolio 01</span>
+          </div>
+          <div class="inner">
+            <span class="tag">Community Transformation Platform</span>
+            <h3>The Human Project</h3>
+            <p>For more than fifteen years, The Human Project has been building and validating community-based solutions that have reached more than 110,000 people across Brazil.</p>
+            <div class="meta">A proven model for breaking the cycle of poverty.</div>
+            <a href="#" class="btn btn-gold btn-block">Explore Portfolio <span class="arrow">↗</span></a>
+          </div>
+        </article>
+
+        <article class="p-card alt reveal">
+          <div class="photo pc-2" role="img" aria-label="Rede Synapse team on stage">
+            <span class="badge teal">Portfolio 02</span>
+          </div>
+          <div class="inner">
+            <span class="tag teal">Evidence-Based Education</span>
+            <h3>Rede Synapse</h3>
+            <p>An education organization helping children strengthen literacy and mathematics through neuroscience-informed teaching methods across dozens of municipalities.</p>
+            <div class="meta">Scalable. Measurable. Transformable.</div>
+            <a href="#" class="btn btn-gold btn-block">Explore Portfolio <span class="arrow">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MEASURING WHAT MATTERS ================= -->
+  <section class="section measure">
+    <div class="wrap">
+      <div class="reveal">
+        <div class="eyebrow">Measuring what matters</div>
+        <h2>Transformation should never be left to chance.</h2>
+        <p class="copy">Every investment should create measurable impact. That's why we partner with researchers, universities, and independent experts to strengthen evidence, improve outcomes, and guide decisions with data, not assumptions.</p>
+      </div>
+
+      <div class="chart-card reveal" aria-hidden="true">
+        <svg viewBox="0 0 340 260" preserveAspectRatio="none">
+          <circle cx="20" cy="250" r="90" fill="#14332b"/>
+          <circle cx="80" cy="230" r="80" fill="#14332b" opacity=".12"/>
+          <circle cx="40" cy="190" r="110" fill="#14332b" opacity=".06"/>
+          <path d="M10 220 C 90 200, 150 160, 200 110 S 290 40, 330 20" fill="none" stroke="#14332b" stroke-width="1" opacity=".5"/>
+          <path d="M10 230 C 100 210, 160 150, 220 100 S 300 50, 330 30" fill="none" stroke="#d18b3c" stroke-width="1.2"/>
+          <circle cx="118" cy="182" r="6" fill="#d18b3c"/>
+          <circle cx="160" cy="150" r="4" fill="#d18b3c"/>
+          <circle cx="205" cy="112" r="3.5" fill="#d18b3c"/>
+          <circle cx="285" cy="56" r="3" fill="#d18b3c"/>
+        </svg>
+        <div class="chart-legend">
+          <div><b>01</b>Evidence</div>
+          <div><b>02</b>Learning</div>
+          <div><b>03</b>Outcomes</div>
+        </div>
+      </div>
+
+      <div class="principles reveal">
+        <div class="principle"><span class="n">01</span><div><h3>Define the outcome</h3><p>Begin with a clear, human result — not an activity count.</p></div></div>
+        <div class="principle"><span class="n">02</span><div><h3>Strengthen the evidence</h3><p>Build the research and learning systems behind each model.</p></div></div>
+        <div class="principle"><span class="n">03</span><div><h3>Scale what works</h3><p>Direct capital toward results that can endure and expand.</p></div></div>
+      </div>
+
+      <a href="#" class="btn btn-gold btn-block">View Impact Report <span class="arrow">↗</span></a>
+    </div>
+  </section>
+
+  <!-- ================= INVESTORS CTA ================= -->
+  <section class="section invite" id="invest">
+    <div class="wrap">
+      <div class="eyebrow">An invitation to invest differently</div>
+      <h2 class="serif-title">We don't have donors. <em>We have investors.</em></h2>
+      <div class="rule"></div>
+      <p>Every significant investment decision — personal or corporate — begins with a question about purpose. What is this capital for? What do I want it to do in the world? What legacy makes sense for me, for my family, for my company?</p>
+      <p>When you invest in the <strong>Human Purpose Organization</strong>, you acquire a <strong>Human Development Stake</strong>. Think of it as venture capital for human potential — but unlike financial capital, this stake doesn't mature on a quarterly report. It matures in classrooms, in family incomes, in opportunities created, and in cycles of poverty that stop repeating.</p>
+      <p>Here your return will be measured differently: through <strong>verified milestones</strong> in real people's lives, tangible gains in education and economic opportunity, and <strong>lasting transformation</strong> across communities. Your return isn't what comes back to you, but what moves forward because of you. This is capital with purpose — invested today and multiplied across generations.</p>
+      <a href="#" class="btn btn-green btn-block">Become an Investor <span class="arrow">↗</span></a>
+    </div>
+  </section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <a href="#top" class="logo" aria-label="Human Purpose Organization home">
+      <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <circle cx="20" cy="26" r="11"/><circle cx="20" cy="7" r="3" fill="currentColor"/>
+        <path d="M20 10v18M13 17h14M20 28l-6 7M20 28l6 7"/>
+      </svg>
+      <span class="logo-text">Human<br>Purpose<br>Organization</span>
+    </a>
+    <p class="tagline">Purpose becomes progress.</p>
+
+    <div class="f-cols">
+      <div>
+        <h4>Organization</h4>
+        <a href="#about">About Human Purpose Organization</a>
+        <a href="#">What we invest in</a>
+        <a href="#">How it works</a>
+      </div>
+      <div>
+        <h4>Accountability</h4>
+        <a href="#">Current investments</a>
+        <a href="#">Evidence and outcomes</a>
+        <a href="#invest">Become an investor</a>
+      </div>
+    </div>
+
+    <p class="legal">HPO-US is a nonprofit organization recognized under Section 501(c)(3) of the U.S. Internal Revenue Code. EIN: 00-0000000. Contributions to HPO-US are tax-deductible to the extent permitted by law.</p>
+
+    <div class="f-bottom">
+      <div class="social">
+        <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.1l-6.8 7.8L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3Zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5Z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9.5h4V21H3V9.5Zm6.5 0h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5Z"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.3c0-.8.2-1.3 1.4-1.3H17V2h-2.6C11.5 2 10.5 3.6 10.5 6.1V8H8v3h2.5v11H14V11h2.6l.4-3H14Z"/></svg></a>
+        <a href="#" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 5.9c-.7.3-1.5.5-2.4.6.9-.5 1.5-1.3 1.8-2.3-.8.5-1.7.8-2.6 1a4.1 4.1 0 0 0-7 3.7A11.6 11.6 0 0 1 3.4 4.6a4.1 4.1 0 0 0 1.3 5.5c-.7 0-1.3-.2-1.9-.5 0 2 1.4 3.7 3.3 4.1-.6.2-1.2.2-1.9.1.5 1.6 2.1 2.8 3.9 2.9A8.3 8.3 0 0 1 2 18.4 11.7 11.7 0 0 0 8.3 20c7.5 0 11.7-6.2 11.7-11.7v-.5c.8-.6 1.5-1.3 2-2Z"/></svg></a>
+      </div>
+      <small>Purpose. Accountability. Transformation.</small>
+      <small>© 2026 Human Purpose Organization.</small>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script>
+  (function(){
+    var body=document.body, btn=document.getElementById('menuBtn'),
+        drawer=document.getElementById('drawer'), header=document.getElementById('header'),
+        toTop=document.getElementById('toTop');
+
+    function setMenu(open){
+      body.classList.toggle('menu-open',open);
+      btn.setAttribute('aria-expanded',open);
+      btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+      drawer.setAttribute('aria-hidden',!open);
+    }
+    btn.addEventListener('click',function(){setMenu(!body.classList.contains('menu-open'))});
+    drawer.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')setMenu(false)});
+
+    function onScroll(){
+      var y=window.scrollY;
+      header.classList.toggle('scrolled',y>8);
+      toTop.classList.toggle('show',y>700);
+    }
+    window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+    toTop.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});
+
+    // Reveal-on-scroll + count-up stats
+    var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!('IntersectionObserver' in window)||reduce){
+      document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
+      return;
+    }
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+    },{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
+
+    var cio=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return; cio.unobserve(en.target);
+        var el=en.target,end=+el.dataset.count,suf=el.dataset.suffix||'',t0=null;
+        function step(t){
+          if(!t0)t0=t; var p=Math.min((t-t0)/1200,1), v=Math.round(end*(1-Math.pow(1-p,3)));
+          el.textContent=v.toLocaleString('en-US')+suf; if(p<1)requestAnimationFrame(step);
+        }
+        requestAnimationFrame(step);
+      });
+    },{threshold:.6});
+    document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
+  })();
+</script>
+</body>
+</html>
