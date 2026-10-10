@@ -1,9 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Human Purpose Organization</title>
+<title>Human Purpose Mobile</title>
 <meta name="description" content="Investing in Human Potential — capital with purpose, invested today and multiplied across generations." />
 <meta name="theme-color" content="#14332b" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,7 +32,13 @@
   }
 
   *,*::before,*::after{box-sizing:border-box}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  :root{color-scheme:light;--backdrop:#d9d6ce}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:var(--backdrop)}
+  .phone{max-width:430px;margin:0 auto;background:var(--paper);position:relative}
+  @media (min-width:500px){
+    body{background:var(--backdrop)!important;padding-block:24px}
+    .phone{box-shadow:0 30px 80px rgba(15,42,35,.25);border-radius:28px;overflow:clip}
+  }
   body{
     margin:0;background:var(--paper);color:var(--ink);
     font-family:var(--font-body);font-size:15px;line-height:1.6;
@@ -91,7 +92,7 @@
      HEADER + MOBILE MENU
      ========================================================= */
   .header{
-    position:sticky;top:0;z-index:50;background:var(--cream);
+    position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--cream);
     border-bottom:1px solid transparent;transition:border-color .2s, box-shadow .2s;
   }
   .header.scrolled{border-color:var(--line);box-shadow:0 4px 18px rgba(0,0,0,.06)}
@@ -118,7 +119,7 @@
   .menu-open .menu-btn span::after{top:0;transform:rotate(-45deg)}
 
   .drawer{
-    position:fixed;inset:68px 0 0 0;z-index:49;background:var(--green-800);color:#fff;
+    position:fixed;top:calc(68px + env(safe-area-inset-top,0px));bottom:0;left:50%;width:min(100%,430px);margin-left:max(-50%,-215px);z-index:49;background:var(--green-800);color:#fff;
     padding:28px var(--gutter) 40px;display:flex;flex-direction:column;
     transform:translateY(-8px);opacity:0;visibility:hidden;transition:.25s ease;overflow-y:auto;
   }
@@ -153,8 +154,8 @@
   .hero .body{margin-top:14px;color:rgba(255,255,255,.78);font-size:14px}
   .hero .btn{margin-top:26px}
   .hero-photo{
-    height:340px;
-    --img:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=900&q=70');
+    height:auto;aspect-ratio:200/180;max-width:100%;background-position:center top;
+    --img:url('images/hero.jpg');
   }
   .hero-photo::before{
     content:"";position:absolute;inset:0;
@@ -181,18 +182,14 @@
   .impact .pill::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
   .impact h2{font-size:30px;font-weight:800;color:var(--green-800)}
   .impact .copy{margin-top:16px;color:var(--muted)}
-  .arches{position:relative;height:330px;margin:36px 0 28px}
-  .arch{position:absolute;border-radius:999px;box-shadow:0 18px 40px rgba(0,0,0,.12)}
-  .arch-1{left:0;top:0;width:58%;height:300px;
-    --img:url('https://images.unsplash.com/photo-1529390079861-591de354faf5?w=700&q=70')}
-  .arch-2{right:0;bottom:0;width:52%;height:230px;border:6px solid var(--paper);
-    --img:url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=700&q=70')}
+  .arches{margin:36px 0 28px;aspect-ratio:135/152;max-width:100%;border-radius:var(--radius);
+    background:url('images/arches.jpg') center/cover no-repeat}
   .feature-card{
     background:#fff;border:1px solid var(--line);border-radius:var(--radius);
     overflow:hidden;box-shadow:0 10px 30px rgba(20,51,43,.06);
   }
   .feature-card .photo{height:180px;
-    --img:url('https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=70')}
+    --img:url('images/feature.jpg')}
   .feature-card .inner{padding:22px}
   .coin{width:40px;height:40px;border-radius:50%;background:var(--gold);display:grid;place-items:center;margin-bottom:14px}
   .feature-card h3{font-size:17px;font-weight:800;color:var(--green-800);padding-bottom:12px;border-bottom:1px solid var(--line)}
@@ -213,7 +210,7 @@
     font-size:11px;letter-spacing:.12em;text-transform:uppercase;line-height:1.7;color:rgba(255,255,255,.8);
   }
   .scale .photo{height:220px;border-radius:6px;margin:32px 0 16px;
-    --img:url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=900&q=70')}
+    --img:url('images/classroom.jpg')}
   .steps{display:grid;gap:1px;background:rgba(255,255,255,.08);border-radius:6px;overflow:hidden}
   .step{background:var(--green-700);padding:22px 20px;position:relative}
   .step .num{font-family:var(--font-head);font-size:11px;font-weight:700;color:var(--gold);letter-spacing:.1em}
@@ -228,14 +225,17 @@
   .opportunity h2{font-size:30px;font-weight:800;color:var(--green-800)}
   .opportunity .copy{margin-top:14px;color:var(--muted);padding-bottom:28px;border-bottom:1px solid var(--line)}
   .areas{display:grid;gap:16px;margin-top:28px}
-  .area{min-height:360px;border-radius:6px;display:flex;align-items:flex-end;color:#fff}
-  .area::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,35,0) 30%,rgba(15,42,35,.95) 100%)}
+  .area{border-radius:6px;display:flex;align-items:flex-end;color:#fff;
+    background-color:var(--green-900);background-size:100% auto;background-position:center top;background-repeat:no-repeat}
+  .area::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,42,35,0) 25%,var(--green-900) 62%)}
+  .area-edu{padding-top:42%}
+  .area-inc{padding-top:30%}
   .area .inner{position:relative;padding:24px}
   .area .tag{font-family:var(--font-head);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
   .area h3{margin-top:6px;font-size:28px;font-weight:700}
   .area p{margin-top:8px;font-size:13.5px;color:rgba(255,255,255,.82)}
-  .area-edu{--img:url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=900&q=70')}
-  .area-inc{--img:url('https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=900&q=70')}
+  .area-edu{--img:url('images/education.jpg')}
+  .area-inc{--img:url('images/income.jpg')}
 
   /* =========================================================
      CURRENT INVESTMENTS
@@ -262,8 +262,8 @@
   }
   .p-card .btn{margin-top:20px}
   .p-card.alt{background:var(--cream)}
-  .pc-1{--img:url('https://images.unsplash.com/photo-1544717305-2782549b5136?w=900&q=70')}
-  .pc-2{--img:url('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=900&q=70')}
+  .pc-1{--img:url('images/human-project.jpg')}
+  .pc-2{--img:url('images/rede-synapse.jpg')}
 
   /* =========================================================
      MEASURING WHAT MATTERS
@@ -275,7 +275,8 @@
     margin:30px 0 8px;border-radius:6px;background:linear-gradient(180deg,#f8f5ef,#ece6db);
     border:1px solid var(--line);height:260px;position:relative;overflow:hidden;
   }
-  .chart-card svg{position:absolute;inset:0;width:100%;height:100%}
+  .chart-card{background:url('images/chart.jpg') center/cover no-repeat;height:auto;aspect-ratio:110/116;max-width:100%}
+  .chart-card svg{display:none}
   .chart-legend{
     position:absolute;left:14px;right:14px;bottom:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:4px;
   }
@@ -326,7 +327,7 @@
   .f-bottom small{font-size:12px;color:rgba(255,255,255,.6)}
 
   .to-top{
-    position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom));z-index:40;
+    position:fixed;right:max(16px,calc(50% - 199px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;
     width:46px;height:46px;border-radius:50%;border:0;background:var(--gold);color:var(--green-900);
     font-size:20px;box-shadow:0 8px 20px rgba(0,0,0,.2);cursor:pointer;
     opacity:0;visibility:hidden;transform:translateY(10px);transition:.25s;
@@ -334,8 +335,8 @@
   .to-top.show{opacity:1;visibility:visible;transform:none}
 
   /* Reveal on scroll */
-  .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
-  .reveal.in{opacity:1;transform:none}
+  .reveal{transition:opacity .6s ease, transform .6s ease}
+  .js-anim .reveal:not(.in){opacity:.001;transform:translateY(18px)}
   @media (prefers-reduced-motion:reduce){
     html{scroll-behavior:auto}
     .reveal{opacity:1;transform:none;transition:none}
@@ -344,14 +345,9 @@
   /* Slightly roomier on large phones / small tablets */
   @media (min-width:480px){
     :root{--gutter:28px}
-    .hero-photo{height:420px}
-    .arches{height:400px}
-    .arch-1{height:370px}
-    .arch-2{height:280px}
   }
 </style>
-</head>
-<body>
+<div class="phone">
 
 <!-- ================= HEADER ================= -->
 <header class="header" id="header">
@@ -418,10 +414,7 @@
         <p class="copy">We are not here to reinvent the wheel. We are here to find those already turning it — organizations doing focused, measurable work to break the poverty cycle — and back them with the capital, partnership, and expertise they need to expand their impact and reach more communities.</p>
       </div>
 
-      <div class="arches reveal" aria-hidden="true">
-        <div class="photo arch arch-1"></div>
-        <div class="photo arch arch-2"></div>
-      </div>
+      <div class="arches reveal" role="img" aria-label="Young people gathered in a community classroom"></div>
 
       <div class="feature-card reveal">
         <div class="photo" role="img" aria-label="Students working together on a project"></div>
@@ -639,6 +632,7 @@
   </div>
 </footer>
 
+</div>
 <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
 <script>
@@ -671,6 +665,8 @@
       document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')});
       return;
     }
+    document.documentElement.classList.add('js-anim');
+    setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){el.classList.add('in')})},2500);
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
     },{threshold:.12});
@@ -690,5 +686,3 @@
     document.querySelectorAll('[data-count]').forEach(function(el){cio.observe(el)});
   })();
 </script>
-</body>
-</html>
